@@ -16,6 +16,7 @@ const crypto = require("crypto");
 const fileUpload = require("express-fileupload");
 
 const db = require("./db"); // Mongoose DB Connection
+require("./ping"); // Self keep-alive ping script every 5 minutes
 
 // Import Models for inline handlers and seeder checks
 const Admin = require("./models/Admin");
@@ -550,7 +551,7 @@ async function seedOwner() {
         console.error("Owner seed error:", e.message);
     }
 }
-seedOwner();
+db.once("open", seedOwner);
 
 // Fallback 404
 app.use((req, res, next) => {
