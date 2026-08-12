@@ -21,7 +21,7 @@
     }
 
     :root {
-            --gold: #17301C; /* Supporting deep natural green */
+            --gold: #D9A52A; /* Primary rich golden yellow accent */
             --gold-dark: #01150A; /* Main very dark Himalayan green */
             --gold-light: #D9A52A; /* Primary rich golden yellow accent */
             --gold-bg: #01150A; /* Background surface for modals / dark panels */
@@ -456,8 +456,30 @@
       color: var(--text-muted);
       font-size: 0.95rem;
     }
-  </style>
-</head>
+  
+        /* ═══════════════════════════════════════════
+           INPUT TEXT COLOR FIX (HIGH CONTRAST)
+        ═══════════════════════════════════════════ */
+        input:not(#searchInput), textarea, select, .form-input {
+            color: #111111 !important;
+            background-color: #ffffff !important;
+        }
+
+        input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
+            color: #777777 !important;
+            opacity: 1 !important;
+        }
+
+        #searchInput {
+            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        #searchInput::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+</style></head>
 
 <body>
 

@@ -27,7 +27,7 @@
            DESIGN TOKENS
         ═══════════════════════════════════════════ */
         :root {
-            --gold: #17301C; /* Supporting deep natural green */
+            --gold: #D9A52A; /* Primary rich golden yellow accent */
             --gold-dark: #01150A; /* Main very dark Himalayan green */
             --gold-light: #D9A52A; /* Primary rich golden yellow accent */
             --gold-bg: #01150A; /* Background surface for modals / dark panels */
@@ -651,11 +651,11 @@
         }
 
         .footerCol h4 {
-            font-size: 0.72rem;
+            font-size: 0.78rem;
             font-weight: 700;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: #D9A52A !important;
             margin-bottom: 18px;
         }
 
@@ -667,13 +667,17 @@
 
         .footerCol ul li a {
             font-size: 0.85rem;
-            opacity: 0.7;
-            transition: opacity var(--transition), color var(--transition);
+            color: rgba(255, 255, 255, 0.85) !important;
+            opacity: 0.85;
+            transition: all var(--transition, 0.25s ease);
+            display: inline-block;
         }
 
         .footerCol ul li a:hover {
-            opacity: 1;
-            color: var(--gold);
+            opacity: 1 !important;
+            color: #F5C542 !important;
+            transform: translateX(4px);
+            text-shadow: 0 0 10px rgba(245, 197, 66, 0.5);
         }
 
         .footerBottom {
@@ -1096,8 +1100,30 @@
                 display: none !important;
             }
         }
-    </style>
-</head>
+    
+        /* ═══════════════════════════════════════════
+           INPUT TEXT COLOR FIX (HIGH CONTRAST)
+        ═══════════════════════════════════════════ */
+        input:not(#searchInput), textarea, select, .form-input {
+            color: #111111 !important;
+            background-color: #ffffff !important;
+        }
+
+        input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
+            color: #777777 !important;
+            opacity: 1 !important;
+        }
+
+        #searchInput {
+            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        #searchInput::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+</style></head>
 
 <body>
     

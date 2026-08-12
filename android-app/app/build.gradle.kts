@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.quizgen.app"
+    namespace = "com.himalayakulfi.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.quizgen.app"
+        applicationId = "com.himalayakulfi.app"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -15,11 +15,21 @@ android {
 
         // ============================================================
         // >>> CHANGE THIS TO YOUR DEPLOYED SERVER URL <<<
-        // Example: "https://quizgen.yoursite.com"
-        // For local testing: "http://10.0.2.2:5050" (emulator)
-        //                    "http://192.168.x.x:5050" (real device)
+        // Example: "https://himalayakulfi.com"
+        // For local testing: "http://10.0.2.2:8080" (emulator)
+        //                    "http://192.168.x.x:8080" (real device)
         // ============================================================
-        buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:5050\"")
+        buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:8080\"")
+    }
+
+    signingConfigs {
+        // Uncomment and fill in for Play Store release builds:
+        // create("release") {
+        //     storeFile = file("../himalayakulfi-release.keystore")
+        //     storePassword = "YOUR_STORE_PASSWORD"
+        //     keyAlias = "himalayakulfi"
+        //     keyPassword = "YOUR_KEY_PASSWORD"
+        // }
     }
 
     buildTypes {
@@ -27,6 +37,8 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            // Uncomment for Play Store release:
+            // signingConfig = signingConfigs.getByName("release")
         }
         debug {
             isMinifyEnabled = false

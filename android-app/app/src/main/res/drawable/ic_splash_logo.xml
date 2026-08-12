@@ -8,57 +8,54 @@
     <!-- Background circle -->
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.15"
+        android:fillAlpha="0.12"
         android:pathData="M60,60m-55,0a55,55 0,1 1,110 0a55,55 0,1 1,-110 0" />
 
     <!-- Inner circle -->
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.1"
+        android:fillAlpha="0.08"
         android:pathData="M60,60m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0" />
 
-    <!-- Graduation cap top -->
+    <!-- Mountain peaks (Himalaya) -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M60,28 L30,43 L60,58 L90,43 Z" />
-
-    <!-- Graduation cap brim shadow -->
+        android:fillAlpha="0.9"
+        android:pathData="M60,18 L42,48 L78,48 Z" />
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.7"
-        android:pathData="M60,58 L90,43 L90,47 L60,62 Z" />
-
-    <!-- Left tassel string -->
+        android:fillAlpha="0.55"
+        android:pathData="M46,28 L30,48 L62,48 Z" />
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M42,48 L42,65"
-        android:strokeWidth="2"
-        android:strokeColor="#FFFFFF" />
+        android:fillAlpha="0.35"
+        android:pathData="M74,30 L58,48 L90,48 Z" />
 
-    <!-- Tassel -->
+    <!-- Snow cap accent -->
     <path
-        android:fillColor="#F59E0B"
-        android:pathData="M42,65 L38,75 L42,73 L46,75 Z" />
+        android:fillColor="#D9A52A"
+        android:pathData="M60,18 L56,28 L64,28 Z" />
 
-    <!-- Letter Q -->
+    <!-- Kulfi body -->
+    <path
+        android:fillColor="#D9A52A"
+        android:pathData="M50,50 Q50,44 60,44 Q70,44 70,50 L70,60 L50,60 Z" />
+
+    <!-- Kulfi lower part -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M52,68 Q52,62 60,62 Q68,62 68,68 Q68,74 60,74 Q52,74 52,68 Z M57,68 Q57,65 60,65 Q63,65 63,68 Q63,71 60,71 Q57,71 57,68 Z" />
+        android:pathData="M52,60 L52,66 Q52,74 60,74 Q68,74 68,66 L68,60 Z" />
 
-    <!-- Q tail -->
+    <!-- Kulfi stick -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M63,72 L68,78"
-        android:strokeWidth="2.5"
-        android:strokeColor="#FFFFFF"
-        android:strokeLineCap="round" />
+        android:fillColor="#C4B873"
+        android:pathData="M57,74 L57,90 L63,90 L63,74 Z" />
 
-    <!-- Underline accent -->
+    <!-- Brand accent underline -->
     <path
-        android:fillColor="#F59E0B"
-        android:pathData="M45,82 L75,82"
+        android:pathData="M42,96 L78,96"
         android:strokeWidth="3"
-        android:strokeColor="#F59E0B"
+        android:strokeColor="#D9A52A"
         android:strokeLineCap="round" />
 
 </vector>

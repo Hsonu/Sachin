@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Main App Theme -->
-    <style name="Theme.QuizGen" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.HimalayaKulfi" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
@@ -14,7 +14,7 @@
     </style>
 
     <!-- Splash Screen Theme -->
-    <style name="Theme.QuizGen.Splash" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.HimalayaKulfi.Splash" parent="Theme.Material3.Dark.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_background</item>
         <item name="android:statusBarColor">@color/splash_start</item>
         <item name="android:navigationBarColor">@color/splash_end</item>

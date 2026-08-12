@@ -5,45 +5,45 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <!-- Graduation cap top -->
+    <!-- Mountain peaks (Himalaya) -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,25 L28,38 L54,51 L80,38 Z" />
-
-    <!-- Cap right shadow -->
+        android:fillAlpha="0.9"
+        android:pathData="M54,22 L38,48 L70,48 Z" />
     <path
         android:fillColor="#FFFFFF"
-        android:fillAlpha="0.8"
-        android:pathData="M54,51 L80,38 L80,42 L54,55 Z" />
-
-    <!-- Tassel string -->
-    <path
-        android:pathData="M38,42 L38,56"
-        android:strokeWidth="2"
-        android:strokeColor="#FFFFFF" />
-
-    <!-- Tassel end -->
-    <path
-        android:fillColor="#F59E0B"
-        android:pathData="M38,56 L34,65 L38,63 L42,65 Z" />
-
-    <!-- Letter Q -->
+        android:fillAlpha="0.6"
+        android:pathData="M42,30 L28,48 L56,48 Z" />
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M46,64 Q46,57 54,57 Q62,57 62,64 Q62,71 54,71 Q46,71 46,64 Z M50,64 Q50,60 54,60 Q58,60 58,64 Q58,68 54,68 Q50,68 50,64 Z" />
+        android:fillAlpha="0.4"
+        android:pathData="M66,32 L52,48 L80,48 Z" />
 
-    <!-- Q tail -->
+    <!-- Snow caps -->
     <path
-        android:pathData="M59,69 L64,76"
+        android:fillColor="#D9A52A"
+        android:pathData="M54,22 L50,30 L58,30 Z" />
+
+    <!-- Kulfi stick shape -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M47,52 L47,56 Q47,64 54,64 Q61,64 61,56 L61,52 Z" />
+
+    <!-- Kulfi top (rounded) -->
+    <path
+        android:fillColor="#D9A52A"
+        android:pathData="M45,46 Q45,40 54,40 Q63,40 63,46 L63,54 L45,54 Z" />
+
+    <!-- Kulfi stick -->
+    <path
+        android:fillColor="#C4B873"
+        android:pathData="M52,64 L52,78 L56,78 L56,64 Z" />
+
+    <!-- Brand accent line -->
+    <path
+        android:pathData="M38,84 L70,84"
         android:strokeWidth="2.5"
-        android:strokeColor="#FFFFFF"
-        android:strokeLineCap="round" />
-
-    <!-- Accent line -->
-    <path
-        android:pathData="M40,80 L68,80"
-        android:strokeWidth="3"
-        android:strokeColor="#F59E0B"
+        android:strokeColor="#D9A52A"
         android:strokeLineCap="round" />
 
 </vector>

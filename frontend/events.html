@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #17301C; /* Supporting deep natural green */
+            --gold: #D9A52A; /* Primary rich golden yellow accent */
             --gold-dark: #01150A; /* Main very dark Himalayan green */
             --gold-light: #D9A52A; /* Primary rich golden yellow accent */
             --gold-bg: #01150A; /* Background surface for modals / dark panels */
@@ -390,8 +390,30 @@
             font-size: 0.8rem;
             color: #C4B873;
         }
-    </style>
-</head>
+    
+        /* ═══════════════════════════════════════════
+           INPUT TEXT COLOR FIX (HIGH CONTRAST)
+        ═══════════════════════════════════════════ */
+        input:not(#searchInput), textarea, select, .form-input {
+            color: #111111 !important;
+            background-color: #ffffff !important;
+        }
+
+        input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
+            color: #777777 !important;
+            opacity: 1 !important;
+        }
+
+        #searchInput {
+            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        #searchInput::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+</style></head>
 
 <body>
 

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- QUIZGEN Brand Colors -->
-    <color name="primary">#2563EB</color>
-    <color name="primary_dark">#1e3a8a</color>
-    <color name="primary_light">#DBEAFE</color>
-    <color name="accent">#F59E0B</color>
-    <color name="accent_dark">#D97706</color>
+    <!-- Himalaya Kulfi Brand Colors -->
+    <color name="primary">#01150A</color>
+    <color name="primary_dark">#01150A</color>
+    <color name="primary_light">#17301C</color>
+    <color name="accent">#D9A52A</color>
+    <color name="accent_dark">#9B751D</color>
 
     <!-- Surfaces -->
-    <color name="surface">#FFFFFF</color>
-    <color name="surface_dark">#0F172A</color>
-    <color name="background">#F8FAFC</color>
+    <color name="surface">#01150A</color>
+    <color name="surface_dark">#01150A</color>
+    <color name="background">#01150A</color>
 
     <!-- Text Colors -->
-    <color name="text_primary">#1E293B</color>
-    <color name="text_secondary">#64748B</color>
-    <color name="text_hint">#94A3B8</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#C4B873</color>
+    <color name="text_hint">#C4B873</color>
 
     <!-- Status Colors -->
-    <color name="success">#10B981</color>
+    <color name="success">#8FBE22</color>
     <color name="error">#EF4444</color>
-    <color name="warning">#F59E0B</color>
+    <color name="warning">#D9A52A</color>
 
     <!-- Splash -->
-    <color name="splash_start">#2563EB</color>
-    <color name="splash_end">#1e3a8a</color>
+    <color name="splash_start">#01150A</color>
+    <color name="splash_end">#17301C</color>
 </resources>

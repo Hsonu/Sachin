@@ -1,4 +1,4 @@
-package com.quizgen.app;
+package com.himalayakulfi.app;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

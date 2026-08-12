@@ -47,7 +47,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:indeterminate="true"
-            android:indeterminateTint="@color/primary" />
+            android:indeterminateTint="@color/accent" />
 
         <TextView
             android:id="@+id/loadingText"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Loading QUIZGEN..."
+            android:text="Loading Himalaya Kulfi..."
             android:textColor="@color/text_secondary"
             android:textSize="14sp" />
 

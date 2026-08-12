@@ -17,8 +17,30 @@
       border: 1px solid #e2e8f0;
       white-space: pre-wrap;
     }
-  </style>
-</head>
+  
+        /* ═══════════════════════════════════════════
+           INPUT TEXT COLOR FIX (HIGH CONTRAST)
+        ═══════════════════════════════════════════ */
+        input:not(#searchInput), textarea, select, .form-input {
+            color: #111111 !important;
+            background-color: #ffffff !important;
+        }
+
+        input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
+            color: #777777 !important;
+            opacity: 1 !important;
+        }
+
+        #searchInput {
+            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        #searchInput::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+</style></head>
 <body>
 <div id="adminLayout">
 

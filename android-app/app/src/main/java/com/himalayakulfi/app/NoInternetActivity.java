@@ -1,4 +1,4 @@
-package com.quizgen.app;
+package com.himalayakulfi.app;
 
 import android.content.Intent;
 import android.net.ConnectivityManager;

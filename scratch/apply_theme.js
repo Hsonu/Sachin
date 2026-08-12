@@ -103,7 +103,7 @@ const gradientReplacements = [
 const mainRootRegex = /:root\s*\{([^}]*--gold[^}]*--cream[^}]*)\}/gi;
 
 const newRootStyles = `:root {
-            --gold: #17301C; /* Supporting deep natural green */
+            --gold: #D9A52A; /* Primary rich golden yellow accent */
             --gold-dark: #01150A; /* Main very dark Himalayan green */
             --gold-light: #D9A52A; /* Primary rich golden yellow accent */
             --gold-bg: #01150A; /* Background surface for modals / dark panels */

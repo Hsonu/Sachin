@@ -23,11 +23,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif-black"
-        android:letterSpacing="0.15"
-        android:text="QUIZGEN"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:fontFamily="serif"
+        android:letterSpacing="0.1"
+        android:text="HIMALAYA KULFI"
+        android:textColor="#D9A52A"
+        android:textSize="32sp"
+        android:textStyle="bold"
         android:alpha="0" />
 
     <!-- Tagline -->
@@ -37,9 +38,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-light"
-        android:text="College ERP Portal"
-        android:textColor="#B0C4FF"
-        android:textSize="16sp"
+        android:text="Premium Handcrafted Kulfi &amp; Desserts"
+        android:textColor="#C4B873"
+        android:textSize="15sp"
         android:alpha="0" />
 
     <!-- Bottom loading indicator -->
@@ -48,6 +49,6 @@
         android:layout_height="32dp"
         android:layout_marginTop="48dp"
         android:indeterminate="true"
-        android:indeterminateTint="#B0C4FF" />
+        android:indeterminateTint="#D9A52A" />
 
 </LinearLayout>

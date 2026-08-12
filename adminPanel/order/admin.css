@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-            --gold: #17301C; /* Supporting deep natural green */
+            --gold: #D9A52A; /* Primary rich golden yellow accent */
             --gold-dark: #01150A; /* Main very dark Himalayan green */
             --gold-light: #D9A52A; /* Primary rich golden yellow accent */
             --gold-bg: #01150A; /* Background surface for modals / dark panels */
@@ -445,7 +445,7 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--radius-sm);
   padding: 10px 13px;
   font-size: 0.88rem;
-  color: var(--text-h);
+  color: #111111 !important;
   transition: border-color var(--transition), box-shadow var(--transition);
   outline: none;
 }
@@ -924,3 +924,25 @@ input, select, textarea { font-family: inherit; }
   font-weight: 600;
   text-decoration: underline;
 }
+
+        /* ═══════════════════════════════════════════
+           INPUT TEXT COLOR FIX (HIGH CONTRAST)
+        ═══════════════════════════════════════════ */
+        input:not(#searchInput), textarea, select, .form-input {
+            color: #111111 !important;
+            background-color: #ffffff !important;
+        }
+
+        input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
+            color: #777777 !important;
+            opacity: 1 !important;
+        }
+
+        #searchInput {
+            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        #searchInput::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
