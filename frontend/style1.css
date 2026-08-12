@@ -10,7 +10,7 @@ p {
 #headerMainDiv {
     display: flex;
     justify-content: center;
-    background-color: black;
+    background-color: #01150A;
     /* padding: 2vw; */
     padding: clamp(2px, 0.5vw, 48px);
     justify-content: space-around;
@@ -88,7 +88,7 @@ video {
 #CardDiv {
     display: flex;
     flex-direction: column;
-    border: 1px solid pink;
+    border: 1px solid #C4B873;
     width: 40vh;
     margin-left: 15px;
     padding: 12px;
@@ -96,7 +96,7 @@ video {
 }
 
 #CardDiv:hover {
-    box-shadow: 0px 0px 8px 0px pink;
+    box-shadow: 0px 0px 8px 0px #C4B873;
 
 }
 
@@ -134,17 +134,17 @@ video {
 }
 
 .BuyBtn {
-    border: 1px solid pink;
+    border: 1px solid #C4B873;
     padding: 10px;
     cursor: pointer;
 
 }
 
 .BuyBtn:hover {
-    background-color: pink;
+    background-color: #D9A52A; color: #01150A; border-color: #D9A52A;
     color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 0px 8px 0px pink;
+    box-shadow: 0px 0px 8px 0px #C4B873;
 }
 
 #d-img {
@@ -172,8 +172,8 @@ video {
 }
 
 li:hover {
-    color: pink;
-    border-bottom: 2px solid pink;
+    color: #D9A52A;
+    border-bottom: 2px solid #D9A52A;
     cursor: pointer;
 }
 
@@ -205,7 +205,7 @@ a {
 }
 
 #LoginMainDiv:hover {
-    box-shadow: 0px 0px 8px 0px pink;
+    box-shadow: 0px 0px 8px 0px #C4B873;
 }
 
 #mainf {
@@ -224,8 +224,8 @@ a {
 #loginBtn {
     display: flex;
     justify-content: center;
-    /* outline-color: #0d6efd; */
-    border: 1.5px solid #0d6efd;
+    /* outline-color: #D9A52A; */
+    border: 1.5px solid #D9A52A;
     transition: 0.3s;
 }
 
@@ -270,13 +270,13 @@ input {
     height: 6vh;
     align-items: center;
     margin-top: 2vh;
-    border: 1.5px solid #0d6efd;
-    outline-color: #0d6efd;
+    border: 1.5px solid #D9A52A;
+    outline-color: #D9A52A;
 
 }
 
 #loginBtn:hover {
-    background-color: rgb(44, 40, 40);
+    background-color: #D9A52A; color: #01150A; box-shadow: 0px 0px 7px 1px #D9A52A;
     /* background-color: #0d6efd; */
     color: white;
     box-shadow: 0px 0px 7px 1px black;
@@ -284,7 +284,7 @@ input {
 }
 
 #VerifyOTP:hover {
-    background-color: rgb(44, 40, 40);
+    background-color: #D9A52A; color: #01150A; box-shadow: 0px 0px 7px 1px #D9A52A;
     /* background-color: #0d6efd; */
     color: white;
     box-shadow: 0px 0px 7px 1px black;
@@ -347,7 +347,7 @@ input {
     #CardDiv {
         display: flex;
         flex-direction: column;
-        border: 1px solid pink;
+        border: 1px solid #C4B873;
         width: 18vh;
         margin-left: 15px;
         padding: 12px;
@@ -429,7 +429,7 @@ input {
         border-radius: 3px;
         height: 5vh;
         align-items: center;
-        border: 1.5px solid #0d6efd;
+        border: 1.5px solid #D9A52A;
         outline-color: #0d6efd
     }
 

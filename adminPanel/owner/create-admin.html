@@ -21,19 +21,29 @@
     }
 
     :root {
-      --gold: #1B4332; /* Royal Cardamom Emerald */
-      --gold-dark: #0F291E; /* Dark Emerald */
-      --gold-light: #C5A880; /* Champagne Gold Accent */
-      --gold-bg: #FAF6F0; /* Vanilla Almond Cream */
-      --cream: #FAF6F0;
-      --white: #ffffff;
-      --text-h: #2C1E15;
-      --text-body: #4E3B31;
-      --text-muted: #8C7769;
-      --border: #E2D5C1;
-      --border-solid: #e8e0d5;
-      --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+            --gold: #17301C; /* Supporting deep natural green */
+            --gold-dark: #01150A; /* Main very dark Himalayan green */
+            --gold-light: #D9A52A; /* Primary rich golden yellow accent */
+            --gold-bg: #01150A; /* Background surface for modals / dark panels */
+            --cream: #01150A; /* Primary background color (dark theme) */
+            --dark: #01150A; /* Main brand dark background */
+            --dark-2: #17301C; /* Supporting deep natural green background */
+            --dark-3: #22432a; /* Mid-shade natural green for surfaces */
+            --text-h: #FFFFFF; /* Heading text (clean white for high contrast) */
+            --text-body: #FFFFFF; /* Body text (clean white for high contrast) */
+            --text-muted: #C4B873; /* Muted antique gold for labels, subtitles, details */
+            --border: #C4B873; /* Muted antique gold borders */
+            --white: #17301C; /* Deep green surface background for cards / sections */
+            --brand-green: #01150A;
+            --deep-green: #17301C;
+            --brand-gold: #D9A52A;
+            --soft-gold: #C4B873;
+            --mountain-blue: #4D9BCB;
+            --leaf-green: #8FBE22;
+            --header-h: 72px;
+            --radius: 14px;
+            --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -68,12 +78,12 @@
       width: 40px;
       height: 40px;
       border-radius: 10px;
-      background: linear-gradient(135deg, #1B4332, #0F291E);
+      background: linear-gradient(135deg, #17301C, #01150A);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 4px 14px rgba(197, 168, 128, 0.2);
+      box-shadow: 0 4px 14px rgba(217, 165, 42, 0.2);
     }
 
     .sidebarLogoMark svg {
@@ -167,7 +177,7 @@
       height: 36px;
       border-radius: 9px;
       flex-shrink: 0;
-      background: linear-gradient(135deg, #1B4332, #0F291E);
+      background: linear-gradient(135deg, #17301C, #01150A);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -346,13 +356,13 @@
     .fInput:focus {
       border-color: var(--gold);
       background: var(--white);
-      box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15);
+      box-shadow: 0 0 0 3px rgba(217, 165, 42, 0.15);
     }
 
     .goldBtn {
       width: 100%;
       padding: 13px;
-      background: linear-gradient(135deg, #1B4332, #0F291E);
+      background: linear-gradient(135deg, #17301C, #01150A);
       color: var(--text-h);
       border: none;
       border-radius: 9px;
@@ -372,7 +382,7 @@
 
     .goldBtn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 22px rgba(197, 168, 128, 0.25);
+      box-shadow: 0 8px 22px rgba(217, 165, 42, 0.25);
     }
 
     .goldBtn:disabled {
@@ -435,7 +445,7 @@
       width: 38px;
       height: 38px;
       border-radius: 9px;
-      background: linear-gradient(135deg, #1B4332, #0F291E);
+      background: linear-gradient(135deg, #17301C, #01150A);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -660,7 +670,7 @@
             <div class="adminItemDate">${a.createdAt ? new Date(a.createdAt).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }) : "—"}</div>
           </div>
           <div style="display:flex; gap:6px; align-items:center; margin-left:auto;">
-            <button onclick="toggleActive('${a.adminId}', ${a.isActive === false})" style="padding:6px 10px; font-size:0.72rem; border-radius:6px; font-family:inherit; cursor:pointer; font-weight:600; border:1.5px solid ${a.isActive !== false ? '#e8d4a8' : '#16a34a'}; background:${a.isActive !== false ? 'rgba(197, 168, 128,0.05)' : 'rgba(22,163,74,0.05)'}; color:${a.isActive !== false ? 'var(--gold-dark)' : '#16a34a'}; transition:all var(--transition);">
+            <button onclick="toggleActive('${a.adminId}', ${a.isActive === false})" style="padding:6px 10px; font-size:0.72rem; border-radius:6px; font-family:inherit; cursor:pointer; font-weight:600; border:1.5px solid ${a.isActive !== false ? '#e8d4a8' : '#16a34a'}; background:${a.isActive !== false ? 'rgba(217, 165, 42,0.05)' : 'rgba(22,163,74,0.05)'}; color:${a.isActive !== false ? 'var(--gold-dark)' : '#16a34a'}; transition:all var(--transition);">
               ${a.isActive !== false ? 'Deactivate' : 'Activate'}
             </button>
             <button onclick="toggleEdit('${a.adminId}')" style="padding:6px 10px; font-size:0.72rem; border-radius:6px; border:1.5px solid var(--border); background:rgba(0,0,0,0.02); color:var(--text-body); cursor:pointer; font-weight:600; font-family:inherit; transition:all var(--transition);">
@@ -687,7 +697,7 @@
             </div>
             <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:4px;">
               <button onclick="toggleEdit('${a.adminId}')" style="padding:6px 12px; font-size:0.75rem; background:transparent; border:1px solid var(--border); border-radius:6px; color:var(--text-body); cursor:pointer; font-family:inherit;">Cancel</button>
-              <button onclick="saveAdmin('${a.adminId}')" style="padding:6px 12px; font-size:0.75rem; background: linear-gradient(135deg, #1B4332, #0F291E); border:none; border-radius:6px; color:var(--text-h); font-weight:700; cursor:pointer; font-family:inherit;">Save Changes</button>
+              <button onclick="saveAdmin('${a.adminId}')" style="padding:6px 12px; font-size:0.75rem; background: linear-gradient(135deg, #17301C, #01150A); border:none; border-radius:6px; color:var(--text-h); font-weight:700; cursor:pointer; font-family:inherit;">Save Changes</button>
             </div>
           </div>
         </div>

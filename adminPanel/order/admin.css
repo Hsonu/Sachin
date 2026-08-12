@@ -7,64 +7,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* ── Brand Palette ── */
-  --gold: #c9a96e;
-  --gold-dark: #a8854e;
-  --gold-light: #e8d4a8;
-  --gold-bg: #fdf7ee;
-  --gold-shadow: rgba(201, 169, 110, 0.2);
-
-  /* ── Page Surfaces ── */
-  --cream: #ffffff;
-  --white: #ffffff;
-  --card-bg: #ffffff;
-  --page-bg: #ffffff;
-
-  /* ── Sidebar ── */
-  --sb-width: 248px;
-  --sb-bg: #ffffff;
-  --sb-border: #e8e0d5;
-  --sb-text: #7a7a85;
-  --sb-text-active: #a8854e;
-  --sb-active-bg: #fdf7ee;
-
-  /* ── Topbar ── */
-  --tb-bg: #ffffff;
-  --tb-border: #e8e0d5;
-  --tb-height: 62px;
-
-  /* ── Text ── */
-  --text-h: #0d0d0f;
-  --text-body: #3d3d45;
-  --text-muted: #7a7a85;
-  --text-light: #aaa;
-
-  /* ── Border / Input ── */
-  --border: #e8e0d5;
-  --input-bg: #faf8f5;
-  --input-border: #e8e0d5;
-  --input-focus: #c9a96e;
-
-  /* ── Status Colors ── */
-  --success: #10b981;
-  --success-light: rgba(16, 185, 129, 0.1);
-  --warning: #f59e0b;
-  --warning-light: rgba(245, 158, 11, 0.1);
-  --danger: #ef4444;
-  --danger-light: rgba(239, 68, 68, 0.08);
-  --info: #3b82f6;
-  --info-light: rgba(59, 130, 246, 0.1);
-
-  /* ── Aliases (legacy compat) ── */
-  --primary: #c9a96e;
-  --primary-dark: #a8854e;
-  --primary-light: #fdf7ee;
-  --card-radius: 14px;
-  --card-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02);
-  --radius-sm: 9px;
-  --radius-md: 14px;
-  --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
-}
+            --gold: #17301C; /* Supporting deep natural green */
+            --gold-dark: #01150A; /* Main very dark Himalayan green */
+            --gold-light: #D9A52A; /* Primary rich golden yellow accent */
+            --gold-bg: #01150A; /* Background surface for modals / dark panels */
+            --cream: #01150A; /* Primary background color (dark theme) */
+            --dark: #01150A; /* Main brand dark background */
+            --dark-2: #17301C; /* Supporting deep natural green background */
+            --dark-3: #22432a; /* Mid-shade natural green for surfaces */
+            --text-h: #FFFFFF; /* Heading text (clean white for high contrast) */
+            --text-body: #FFFFFF; /* Body text (clean white for high contrast) */
+            --text-muted: #C4B873; /* Muted antique gold for labels, subtitles, details */
+            --border: #C4B873; /* Muted antique gold borders */
+            --white: #17301C; /* Deep green surface background for cards / sections */
+            --brand-green: #01150A;
+            --deep-green: #17301C;
+            --brand-gold: #D9A52A;
+            --soft-gold: #C4B873;
+            --mountain-blue: #4D9BCB;
+            --leaf-green: #8FBE22;
+            --header-h: 72px;
+            --radius: 14px;
+            --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
 /* ── RESET ── */
 *, *::before, *::after {
@@ -489,7 +454,7 @@ input, select, textarea { font-family: inherit; }
 
 .formInput:focus, .formSelect:focus, .formTextarea:focus {
   border-color: var(--input-focus);
-  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+  box-shadow: 0 0 0 3px rgba(217, 165, 42, 0.15);
   background: var(--white);
 }
 
@@ -520,7 +485,7 @@ input, select, textarea { font-family: inherit; }
 }
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(201,169,110,0.3);
+  box-shadow: 0 6px 18px rgba(217, 165, 42,0.3);
 }
 
 .btn-success { background: var(--success); color: #fff; }
@@ -785,7 +750,7 @@ input, select, textarea { font-family: inherit; }
 .filterInput::placeholder { color: var(--text-muted); }
 .filterInput:focus {
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201,169,110,0.14);
+  box-shadow: 0 0 0 3px rgba(217, 165, 42,0.14);
 }
 .filterSelect {
   background: var(--white);
@@ -935,11 +900,11 @@ input, select, textarea { font-family: inherit; }
 }
 .dropZone:hover {
   border-color: var(--gold);
-  background: rgba(201, 169, 110, 0.06);
+  background: rgba(217, 165, 42, 0.06);
 }
 .dropZone.drag {
   border-color: var(--gold) !important;
-  background: rgba(201, 169, 110, 0.1) !important;
+  background: rgba(217, 165, 42, 0.1) !important;
 }
 .dropZone svg {
   width: 32px; height: 32px;

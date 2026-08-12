@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- PWA configuration -->
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0d0d0f">
+    <meta name="theme-color" content="#01150A">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Himalaya Kulfi">
@@ -26,19 +26,25 @@
            DESIGN TOKENS
         ═══════════════════════════════════════════ */
         :root {
-            --gold: #1B4332; /* Royal Cardamom Emerald */
-            --gold-dark: #0F291E; /* Dark Emerald */
-            --gold-light: #C5A880; /* Champagne Gold Accent */
-            --gold-bg: #FAF6F0; /* Vanilla Almond Cream */
-            --cream: #FAF6F0;
-            --dark: #2C1E15; /* Chai Spice Dark */
-            --dark-2: #3A271C;
-            --dark-3: #4A3527;
-            --text-h: #2C1E15;
-            --text-body: #4E3B31;
-            --text-muted: #8C7769;
-            --border: #E2D5C1;
-            --white: #ffffff;
+            --gold: #17301C; /* Supporting deep natural green */
+            --gold-dark: #01150A; /* Main very dark Himalayan green */
+            --gold-light: #D9A52A; /* Primary rich golden yellow accent */
+            --gold-bg: #01150A; /* Background surface for modals / dark panels */
+            --cream: #01150A; /* Primary background color (dark theme) */
+            --dark: #01150A; /* Main brand dark background */
+            --dark-2: #17301C; /* Supporting deep natural green background */
+            --dark-3: #22432a; /* Mid-shade natural green for surfaces */
+            --text-h: #FFFFFF; /* Heading text (clean white for high contrast) */
+            --text-body: #FFFFFF; /* Body text (clean white for high contrast) */
+            --text-muted: #C4B873; /* Muted antique gold for labels, subtitles, details */
+            --border: #C4B873; /* Muted antique gold borders */
+            --white: #17301C; /* Deep green surface background for cards / sections */
+            --brand-green: #01150A;
+            --deep-green: #17301C;
+            --brand-gold: #D9A52A;
+            --soft-gold: #C4B873;
+            --mountain-blue: #4D9BCB;
+            --leaf-green: #8FBE22;
             --header-h: 72px;
             --radius: 14px;
             --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
@@ -132,7 +138,7 @@
             z-index: 1000;
             background: rgba(13, 13, 15, 0.95);
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+            border-bottom: 1px solid rgba(217, 165, 42, 0.2);
         }
 
         #navInner {
@@ -181,14 +187,14 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.35rem;
             font-weight: 700;
-            color: #C5A880;
+            color: #D9A52A;
             letter-spacing: 0.04em;
         }
 
         #navLogo .brand-tagline {
             font-size: 0.58rem;
             letter-spacing: 0.14em;
-            color: rgba(197, 168, 128, 0.7);
+            color: rgba(217, 165, 42, 0.7);
             text-transform: uppercase;
             margin-top: 1px;
         }
@@ -202,7 +208,7 @@
         #searchInput {
             width: 100%;
             background: rgba(255, 255, 255, 0.08);
-            border: 1.5px solid rgba(197, 168, 128, 0.25);
+            border: 1.5px solid rgba(217, 165, 42, 0.25);
             border-radius: 999px;
             padding: 9px 18px 9px 42px;
             font-size: 0.88rem;
@@ -219,7 +225,7 @@
         #searchInput:focus {
             border-color: var(--gold);
             background: rgba(255, 255, 255, 0.12);
-            box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15);
+            box-shadow: 0 0 0 3px rgba(217, 165, 42, 0.15);
         }
 
         #searchIcon {
@@ -229,7 +235,7 @@
             transform: translateY(-50%);
             width: 18px;
             height: 18px;
-            stroke: rgba(197, 168, 128, 0.6);
+            stroke: rgba(217, 165, 42, 0.6);
             fill: none;
             pointer-events: none;
         }
@@ -259,9 +265,9 @@
         }
 
         .navActionBtn:hover {
-            border-color: rgba(197, 168, 128, 0.4);
-            background: rgba(197, 168, 128, 0.06);
-            color: var(--gold);
+            border-color: rgba(217, 165, 42, 0.4);
+            background: rgba(217, 165, 42, 0.06);
+            color: var(--gold-light);
         }
 
         .navActionBtn svg {
@@ -283,7 +289,7 @@
             width: 17px;
             height: 17px;
             border-radius: 50%;
-            background: var(--gold);
+            background: var(--gold-light);
             color: var(--dark);
             font-size: 0.6rem;
             font-weight: 700;
@@ -625,7 +631,7 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            background: linear-gradient(135deg, #C5A880, #B4966E);
+            background: linear-gradient(135deg, #D9A52A, #B4966E);
             color: var(--dark);
             font-size: 0.85rem;
             font-weight: 700;
@@ -640,7 +646,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 28px rgba(197, 168, 128, 0.45);
+            box-shadow: 0 10px 28px rgba(217, 165, 42, 0.45);
         }
 
         .btn-primary svg {
@@ -783,7 +789,7 @@
 
         .skeletonImg {
             height: 240px;
-            background: linear-gradient(90deg, #f0ebe3 25%, #e8e0d5 50%, #f0ebe3 75%);
+            background: linear-gradient(90deg, #17301C 25%, #22432a 50%, #17301C 75%);
             background-size: 200%;
             animation: shimmer 1.4s infinite;
         }
@@ -794,7 +800,7 @@
 
         .skeletonLine {
             height: 12px;
-            background: linear-gradient(90deg, #f0ebe3 25%, #e8e0d5 50%, #f0ebe3 75%);
+            background: linear-gradient(90deg, #17301C 25%, #22432a 50%, #17301C 75%);
             background-size: 200%;
             animation: shimmer 1.4s infinite;
             border-radius: 6px;
@@ -858,7 +864,7 @@
             position: relative;
             overflow: hidden;
             height: 240px;
-            background: #f8f4ef;
+            background: #17301C;
         }
 
         .card-img-overlay {
@@ -971,10 +977,10 @@
         }
 
         .BuyBtn:hover {
-            background: #C5A880;
-            border-color: #C5A880;
+            background: #D9A52A;
+            border-color: #D9A52A;
             color: var(--dark);
-            box-shadow: 0 4px 16px rgba(197, 168, 128, 0.4);
+            box-shadow: 0 4px 16px rgba(217, 165, 42, 0.4);
             transform: scale(1.04);
         }
 
@@ -1008,13 +1014,13 @@
         .featureIcon {
             width: 52px;
             height: 52px;
-            background: linear-gradient(135deg, #1B4332, #0F291E);
+            background: linear-gradient(135deg, #17301C, #01150A);
             border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 14px;
-            box-shadow: 0 4px 16px rgba(197, 168, 128, 0.3);
+            box-shadow: 0 4px 16px rgba(217, 165, 42, 0.3);
         }
 
         .featureIcon svg {
@@ -1094,7 +1100,7 @@
         }
 
         .socialIcon:hover {
-            background: rgba(197, 168, 128, 0.15);
+            background: rgba(217, 165, 42, 0.15);
             border-color: var(--gold);
         }
 
@@ -1421,8 +1427,8 @@
         }
 
         .header-location-btn:hover {
-            background: rgba(197, 168, 128, 0.08);
-            border-color: rgba(197, 168, 128, 0.3);
+            background: rgba(217, 165, 42, 0.08);
+            border-color: rgba(217, 165, 42, 0.3);
         }
 
         .header-location-btn:focus-visible {
@@ -1495,7 +1501,7 @@
             width: min(400px, calc(100vw - 32px));
             text-align: center;
             position: relative;
-            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(197, 168, 128, 0.15);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(217, 165, 42, 0.15);
             transform: scale(0.9);
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -1546,7 +1552,7 @@
         .location-input-wrap input {
             flex: 1;
             background: rgba(255, 255, 255, 0.98);
-            border: 1px solid rgba(197, 168, 128, 0.3);
+            border: 1px solid rgba(217, 165, 42, 0.3);
             border-radius: 12px;
             padding: 12px 16px;
             color: #120617;
@@ -1559,12 +1565,12 @@
         }
 
         .location-input-wrap input:focus {
-            border-color: #C5A880;
-            box-shadow: 0 0 0 4px rgba(197, 168, 128, 0.15);
+            border-color: #D9A52A;
+            box-shadow: 0 0 0 4px rgba(217, 165, 42, 0.15);
         }
 
         .location-submit-btn {
-            background: linear-gradient(135deg, #1B4332, #0F291E);
+            background: linear-gradient(135deg, #17301C, #01150A);
             color: var(--dark);
             border: none;
             border-radius: 12px;
@@ -1586,7 +1592,7 @@
 
         .location-submit-btn:not(:disabled):hover {
             transform: translateY(-1px);
-            box-shadow: 0 8px 20px rgba(197, 168, 128, 0.3);
+            box-shadow: 0 8px 20px rgba(217, 165, 42, 0.3);
         }
 
         .location-status-text {
@@ -1842,9 +1848,9 @@
 
                 <!-- Product Information Disclaimer Section -->
                 <div id="productInfoSection"
-                    style="margin-top: 20px; padding: 15px; border: 1px solid var(--border, #e8e0d5); border-radius: var(--radius, 14px); background-color: #faf8f5;">
+                    style="margin-top: 20px; padding: 15px; border: 1px solid var(--border, #22432a); border-radius: var(--radius, 14px); background-color: #faf8f5;">
                     <h4
-                        style="font-family: Georgia, serif; font-size: 1.05rem; color: var(--text-h, #2C1E15); margin-bottom: 8px; font-weight: 600;">
+                        style="font-family: Georgia, serif; font-size: 1.05rem; color: var(--text-h, #01150A); margin-bottom: 8px; font-weight: 600;">
                         Product Information</h4>
                     <p id="productDetailsInfo" style="font-size: 0.88rem; line-height: 1.5; color: var(--text-body, #4E3B31);">
                         Ingredients: Milk, Sugar, Cream, Cardamom, Premium Nuts. FSSAI Certified • 100% Vegetarian frozen dessert.

@@ -11,23 +11,35 @@
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     :root {
-      --gold: #1B4332; /* Royal Cardamom Emerald */ --gold-dark: #0F291E; /* Dark Emerald */ --gold-light: #C5A880; /* Champagne Gold Accent */
-      --gold-bg: #FAF6F0; /* Vanilla Almond Cream */
-      --cream: #FAF6F0;
-      --white:#ffffff;
-      --text-h: #2C1E15;
-      --text-body: #4E3B31;
-      --text-muted: #8C7769;
-      --border: #E2D5C1;
-      --border-solid:#e8e0d5;
-      --transition:0.28s cubic-bezier(0.4,0,0.2,1);
-    }
+            --gold: #17301C; /* Supporting deep natural green */
+            --gold-dark: #01150A; /* Main very dark Himalayan green */
+            --gold-light: #D9A52A; /* Primary rich golden yellow accent */
+            --gold-bg: #01150A; /* Background surface for modals / dark panels */
+            --cream: #01150A; /* Primary background color (dark theme) */
+            --dark: #01150A; /* Main brand dark background */
+            --dark-2: #17301C; /* Supporting deep natural green background */
+            --dark-3: #22432a; /* Mid-shade natural green for surfaces */
+            --text-h: #FFFFFF; /* Heading text (clean white for high contrast) */
+            --text-body: #FFFFFF; /* Body text (clean white for high contrast) */
+            --text-muted: #C4B873; /* Muted antique gold for labels, subtitles, details */
+            --border: #C4B873; /* Muted antique gold borders */
+            --white: #17301C; /* Deep green surface background for cards / sections */
+            --brand-green: #01150A;
+            --deep-green: #17301C;
+            --brand-gold: #D9A52A;
+            --soft-gold: #C4B873;
+            --mountain-blue: #4D9BCB;
+            --leaf-green: #8FBE22;
+            --header-h: 72px;
+            --radius: 14px;
+            --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        }
     body { font-family:'Inter',sans-serif; background:var(--cream); color:var(--text-body); min-height:100vh; display:flex; }
 
     /* ── Sidebar ── */
     .sidebar { width:248px; background:var(--white); border-right:1px solid var(--border); display:flex; flex-direction:column; position:fixed; top:0; left:0; height:100vh; z-index:100; }
     .sidebarTop { padding:22px 20px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:12px; }
-    .sidebarLogoMark { width:40px; height:40px; border-radius:10px; background: linear-gradient(135deg, #1B4332, #0F291E); display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 4px 14px rgba(197, 168, 128,0.25); }
+    .sidebarLogoMark { width:40px; height:40px; border-radius:10px; background: linear-gradient(135deg, #17301C, #01150A); display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 4px 14px rgba(217, 165, 42,0.25); }
     .sidebarLogoMark svg { width:22px; height:22px; fill:var(--white); }
     .sidebarBrandName { font-family:'Playfair Display',serif; font-size:0.95rem; font-weight:700; color:var(--text-h); letter-spacing:0.03em; }
     .sidebarBrandRole { font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-dark); margin-top:1px; }
@@ -40,7 +52,7 @@
     .navLink svg { width:16px; height:16px; flex-shrink:0; stroke:currentColor; fill:none; }
     .sidebarFooter { padding:16px; border-top:1px solid var(--border); }
     .ownerCard { padding:12px; border-radius:10px; background:var(--gold-bg); border:1px solid var(--gold); display:flex; align-items:center; gap:10px; margin-bottom:10px; }
-    .ownerAvatar { width:36px; height:36px; border-radius:9px; flex-shrink:0; background: linear-gradient(135deg, #1B4332, #0F291E); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:#ffffff; }
+    .ownerAvatar { width:36px; height:36px; border-radius:9px; flex-shrink:0; background: linear-gradient(135deg, #17301C, #01150A); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:#ffffff; }
     .ownerName { font-size:0.82rem; font-weight:600; color:var(--text-h); }
     .ownerRole { font-size:0.65rem; color:var(--gold-dark); }
     .logoutBtn { width:100%; padding:9px; border:1px solid rgba(239,68,68,0.2); background:rgba(239,68,68,0.05); color:#dc2626; border-radius:8px; font-size:0.75rem; font-weight:600; cursor:pointer; font-family:inherit; display:flex; align-items:center; justify-content:center; gap:7px; transition:all var(--transition); }
@@ -98,14 +110,14 @@
     .goldBtn {
       display:inline-flex; align-items:center; gap:8px;
       padding:9px 18px;
-      background: linear-gradient(135deg, #1B4332, #0F291E);
+      background: linear-gradient(135deg, #17301C, #01150A);
       color:#ffffff; border:none; border-radius:8px;
       font-size:0.75rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;
       text-decoration:none; cursor:pointer; font-family:inherit;
       transition:all var(--transition);
-      box-shadow:0 4px 12px rgba(197, 168, 128,0.2);
+      box-shadow:0 4px 12px rgba(217, 165, 42, 0.2);
     }
-    .goldBtn:hover { transform:translateY(-1px); box-shadow:0 6px 18px rgba(197, 168, 128,0.35); }
+    .goldBtn:hover { transform:translateY(-1px); box-shadow:0 6px 18px rgba(217, 165, 42,0.35); }
     .goldBtn:active { transform:translateY(0); }
 
     .tableWrap { overflow-x:auto; }

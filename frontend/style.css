@@ -57,10 +57,10 @@ header {
 }
 
 body.login-page {
-    background: radial-gradient(circle at top left, rgba(255, 169, 236, 0.18), transparent 35%),
-                radial-gradient(circle at bottom right, rgba(255, 109, 185, 0.18), transparent 30%),
-                linear-gradient(180deg, #0b0b17 0%, #160821 100%);
-    color: #f6edf8;
+    background: radial-gradient(circle at top left, rgba(217, 165, 42, 0.12), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(143, 190, 34, 0.12), transparent 30%),
+                linear-gradient(180deg, #01150A 0%, #17301C 100%);
+    color: #ffffff;
 }
 
 .login-section {
@@ -75,9 +75,9 @@ body.login-page {
     width: min(440px, 88%);
     border-radius: 28px;
     padding: 2.8rem 2.2rem;
-    background: linear-gradient(135deg, rgba(18, 10, 34, 0.98) 0%, rgba(30, 15, 50, 0.98) 100%);
-    border: 1px solid rgba(255, 112, 255, 0.25);
-    box-shadow: 0 0 40px rgba(255, 113, 197, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(1, 21, 10, 0.98) 0%, rgba(23, 48, 28, 0.98) 100%);
+    border: 1px solid rgba(217, 165, 42, 0.35);
+    box-shadow: 0 0 40px rgba(217, 165, 42, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
     backdrop-filter: blur(10px);
     box-sizing: border-box;
@@ -104,7 +104,7 @@ body.login-page {
 }
 
 .login-subtitle {
-    color: #f7d0fb;
+    color: #C4B873;
     text-align: center;
     font-size: 0.9rem;
     margin-bottom: 1.8rem;
@@ -114,8 +114,8 @@ body.login-page {
 }
 
 .otp-message {
-    background: rgba(255, 109, 199, 0.2);
-    border: 1.5px solid rgba(255, 109, 199, 0.4);
+    background: rgba(217, 165, 42, 0.15);
+    border: 1.5px solid rgba(217, 165, 42, 0.3);
     border-radius: 14px;
     padding: 1.2rem 1.4rem;
     margin-bottom: 1.5rem;
@@ -145,7 +145,7 @@ body.login-page {
 .otp-code {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #ff6ec7;
+    color: #D9A52A;
     letter-spacing: 0.15em;
     margin-top: 0.8rem;
     font-family: 'Courier New', monospace;
@@ -162,7 +162,7 @@ body.login-page {
 }
 
 .login-input-row label {
-    color: #f5d6ff;
+    color: #C4B873;
     font-size: 0.88rem;
     font-weight: 500;
     margin-bottom: 0.2rem;
@@ -182,8 +182,8 @@ body.login-page {
 
 .login-input-row input:focus {
     outline: none;
-    border-color: rgba(255, 87, 168, 0.8);
-    box-shadow: 0 0 0 8px rgba(255, 121, 206, 0.12);
+    border-color: rgba(217, 165, 42, 0.8);
+    box-shadow: 0 0 0 8px rgba(217, 165, 42, 0.12);
 }
 
 .button-row {
@@ -205,7 +205,7 @@ body.login-page {
     font-size: 1rem;
     font-weight: 700;
     color: #fff;
-    background: linear-gradient(135deg, #ff6ec7 0%, #ff33b8 55%, #d42c95 100%);
+    background: linear-gradient(135deg, #D9A52A 0%, #C4B873 55%, #9B751D 100%);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
@@ -214,11 +214,11 @@ body.login-page {
 #loginBtn:hover,
 #VerifyOTP:hover {
     transform: translateY(-1px);
-    box-shadow: 0 18px 30px rgba(255, 86, 180, 0.28);
+    box-shadow: 0 18px 30px rgba(217, 165, 42, 0.28);
 }
 
 .form-note {
-    color: #f2d7ff;
+    color: #ffffff;
     font-size: 0.85rem;
     text-align: center;
     margin-top: 0.8rem;
@@ -229,7 +229,7 @@ body.login-page {
 }
 
 .login-hint {
-    color: #f7d0fb;
+    color: #C4B873;
     text-align: center;
     font-size: 0.82rem;
     margin-top: 1rem;
@@ -366,7 +366,7 @@ video {
 #CardDiv {
     display: flex;
     flex-direction: column;
-    border: 1px solid pink;
+    border: 1px solid #C4B873;
     width: 40vh;
     margin-left: 15px;
     padding: 12px;
@@ -374,7 +374,7 @@ video {
 }
 
 #CardDiv:hover {
-    box-shadow: 0px 0px 8px 0px pink;
+    box-shadow: 0px 0px 8px 0px #C4B873;
 
 }
 
@@ -412,17 +412,17 @@ video {
 }
 
 .BuyBtn {
-    border: 1px solid pink;
+    border: 1px solid #C4B873;
     padding: 10px;
     cursor: pointer;
 
 }
 
 .BuyBtn:hover {
-    background-color: pink;
+    background-color: #D9A52A; color: #01150A; border-color: #D9A52A;
     color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 0px 8px 0px pink;
+    box-shadow: 0px 0px 8px 0px #C4B873;
 }
 
 #d-img {
@@ -450,8 +450,8 @@ video {
 }
 
 li:hover {
-    color: pink;
-    border-bottom: 2px solid pink;
+    color: #D9A52A;
+    border-bottom: 2px solid #D9A52A;
     cursor: pointer;
 }
 
@@ -483,7 +483,7 @@ a {
 }
 
 #LoginMainDiv:hover {
-    box-shadow: 0px 0px 8px 0px pink;
+    box-shadow: 0px 0px 8px 0px #C4B873;
 }
 
 #mainf {
@@ -502,8 +502,8 @@ a {
 #loginBtn {
     display: flex;
     justify-content: center;
-    /* outline-color: #0d6efd; */
-    border: 1.5px solid #0d6efd;
+    /* outline-color: #D9A52A; */
+    border: 1.5px solid #D9A52A;
     transition: 0.3s;
 }
 
@@ -548,13 +548,13 @@ input {
     height: 6vh;
     align-items: center;
     margin-top: 2vh;
-    border: 1.5px solid #0d6efd;
-    outline-color: #0d6efd;
+    border: 1.5px solid #D9A52A;
+    outline-color: #D9A52A;
 
 }
 
 #loginBtn:hover {
-    background-color: rgb(44, 40, 40);
+    background-color: #D9A52A; color: #01150A; box-shadow: 0px 0px 7px 1px #D9A52A;
     /* background-color: #0d6efd; */
     color: white;
     box-shadow: 0px 0px 7px 1px black;
@@ -562,7 +562,7 @@ input {
 }
 
 #VerifyOTP:hover {
-    background-color: rgb(44, 40, 40);
+    background-color: #D9A52A; color: #01150A; box-shadow: 0px 0px 7px 1px #D9A52A;
     /* background-color: #0d6efd; */
     color: white;
     box-shadow: 0px 0px 7px 1px black;
@@ -625,7 +625,7 @@ input {
     #CardDiv {
         display: flex;
         flex-direction: column;
-        border: 1px solid pink;
+        border: 1px solid #C4B873;
         width: 18vh;
         margin-left: 15px;
         padding: 12px;
@@ -707,7 +707,7 @@ input {
         border-radius: 3px;
         height: 5vh;
         align-items: center;
-        border: 1.5px solid #0d6efd;
+        border: 1.5px solid #D9A52A;
         outline-color: #0d6efd
     }
 

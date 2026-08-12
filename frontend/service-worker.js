@@ -1,4 +1,4 @@
-const CACHE_NAME = 'netrima-jewels-cache-v2';
+const CACHE_NAME = 'netrima-jewels-cache-v8';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -27,20 +27,20 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate Event: Clean up old caches
+// Activate Event: Clean up all caches and unregister service worker
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
-            console.log('[Service Worker] Clearing old cache:', cache);
-            return caches.delete(cache);
-          }
+          console.log('[Service Worker] Deleting cache:', cache);
+          return caches.delete(cache);
         })
       );
     }).then(() => {
-      // Allow the service worker to control all open clients immediately
+      console.log('[Service Worker] Unregistering self...');
+      return self.registration.unregister();
+    }).then(() => {
       return self.clients.claim();
     })
   );
