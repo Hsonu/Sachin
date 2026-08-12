@@ -146,7 +146,7 @@ app.post("/send-otp", async (req, res, next) => {
             return res.status(400).json({ message: "Invalid 10-digit number" });
         }
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
-        
+
         console.log(`[Legacy OTP] OTP Code generated for ${number}: ${otp}`);
 
         res.status(200).json({
