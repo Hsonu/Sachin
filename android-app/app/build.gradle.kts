@@ -13,13 +13,8 @@ android {
         versionCode = 1
         versionName = "1.0.0"
 
-        // ============================================================
-        // >>> CHANGE THIS TO YOUR DEPLOYED SERVER URL <<<
-        // Example: "https://himalayakulfi.com"
-        // For local testing: "http://10.0.2.2:8080" (emulator)
-        //                    "http://192.168.x.x:8080" (real device)
-        // ============================================================
-        buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:8080\"")
+        // Live Production URL:
+        buildConfigField("String", "BASE_URL", "\"https://sachin-nhmy.onrender.com/\"")
     }
 
     signingConfigs {
