@@ -7,29 +7,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-            --gold: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-dark: #01150A; /* Main very dark Himalayan green */
-            --gold-light: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-bg: #01150A; /* Background surface for modals / dark panels */
-            --cream: #01150A; /* Primary background color (dark theme) */
-            --dark: #01150A; /* Main brand dark background */
-            --dark-2: #17301C; /* Supporting deep natural green background */
-            --dark-3: #22432a; /* Mid-shade natural green for surfaces */
-            --text-h: #FFFFFF; /* Heading text (clean white for high contrast) */
-            --text-body: #FFFFFF; /* Body text (clean white for high contrast) */
-            --text-muted: #C4B873; /* Muted antique gold for labels, subtitles, details */
-            --border: #C4B873; /* Muted antique gold borders */
-            --white: #17301C; /* Deep green surface background for cards / sections */
-            --brand-green: #01150A;
-            --deep-green: #17301C;
-            --brand-gold: #D9A52A;
-            --soft-gold: #C4B873;
-            --mountain-blue: #4D9BCB;
-            --leaf-green: #8FBE22;
-            --header-h: 72px;
-            --radius: 14px;
-            --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+  --gold: #D9A52A; /* Primary rich golden yellow accent */
+  --gold-dark: #D9A52A; /* Warm rich dark gold accent for high contrast text/icons */
+  --gold-light: #E5D298; /* Soft golden tint */
+  --gold-bg: rgba(217, 165, 42, 0.15); /* Translucent golden tint background surface */
+  --gold-shadow: rgba(217, 165, 42, 0.25); /* Golden glow shadow */
+  --cream: #01150A; /* Dark theme background */
+  --dark: #01150A; /* Dark background surface */
+  --dark-2: #17301C; /* Card background surface */
+  --dark-3: #22432a; /* Card hover surface */
+  --text-h: #FFFFFF; /* White heading text */
+  --text-body: #E0E7E1; /* High contrast body text */
+  --text-muted: #C4B873; /* Muted antique gold for labels */
+  --border: rgba(196, 184, 115, 0.35); /* Antique gold borders */
+  --white: #17301C; /* Card container background */
+  --brand-green: #01150A;
+  --deep-green: #17301C;
+  --brand-gold: #D9A52A;
+  --soft-gold: #C4B873;
+  --mountain-blue: #4D9BCB;
+  --leaf-green: #8FBE22;
+  --header-h: 72px;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --card-radius: 14px;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.4);
+  --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Sidebar Layout Variables */
+  --sb-width: 260px;
+  --sb-bg: #01150A;
+  --sb-border: rgba(196, 184, 115, 0.25);
+  --sb-text: #C4B873;
+  --sb-text-active: #D9A52A;
+  --sb-active-bg: rgba(217, 165, 42, 0.15);
+
+  /* Topbar & Page Layout Variables */
+  --page-bg: #01150A;
+  --tb-height: 70px;
+  --tb-bg: #17301C;
+  --tb-border: rgba(196, 184, 115, 0.25);
+  --card-bg: #17301C;
+
+  /* Form & Input Variables */
+  --input-bg: #01150A;
+  --input-border: rgba(196, 184, 115, 0.4);
+  --input-focus: #D9A52A;
+  --primary: #D9A52A;
+  --primary-dark: #9B751D;
+  --primary-light: rgba(217, 165, 42, 0.15);
+
+  /* Status Colors */
+  --success: #10b981;
+  --success-light: rgba(16, 185, 129, 0.15);
+  --warning: #f59e0b;
+  --warning-light: rgba(245, 158, 11, 0.15);
+  --danger: #ef4444;
+  --danger-light: rgba(239, 68, 68, 0.15);
+  --info: #3b82f6;
+  --info-light: rgba(59, 130, 246, 0.15);
+}
 
 /* ── RESET ── */
 *, *::before, *::after {
@@ -445,7 +487,7 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--radius-sm);
   padding: 10px 13px;
   font-size: 0.88rem;
-  color: #111111 !important;
+  color: #FFFFFF !important;
   transition: border-color var(--transition), box-shadow var(--transition);
   outline: none;
 }
@@ -929,13 +971,14 @@ input, select, textarea { font-family: inherit; }
            INPUT TEXT COLOR FIX (HIGH CONTRAST)
         ═══════════════════════════════════════════ */
         input:not(#searchInput), textarea, select, .form-input {
-            color: #111111 !important;
-            background-color: #ffffff !important;
+            color: #FFFFFF !important;
+            background-color: #17301C !important;
+            border: 1px solid var(--border) !important;
         }
 
         input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
-            color: #777777 !important;
-            opacity: 1 !important;
+            color: #C4B873 !important;
+            opacity: 0.8 !important;
         }
 
         #searchInput {

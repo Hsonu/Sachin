@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Serve Static Assets
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/adminPanel', express.static(path.join(__dirname, 'adminPanel')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/partials', express.static(path.join(__dirname, 'views', 'partials')));
 
@@ -39,6 +40,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views', 'index.htm
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')));
 app.get('/student-signup', (req, res) => res.sendFile(path.join(__dirname, 'views', 'studentSignup.html')));
 app.get('/about', (req, res) => res.sendFile(path.join(__dirname, 'views', 'about.html')));
+app.get('/admin', (req, res) => res.sendFile(path.join(__dirname, 'adminPanel', 'Dashboard.html')));
 
 // Owner subviews
 app.get('/owner/login', (req, res) => res.sendFile(path.join(__dirname, 'views', 'ownerLogin.html')));
