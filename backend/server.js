@@ -1,4 +1,4 @@
-// Global Crash Prevention
+// Global Crash Prevention - Updated MongoDB Atlas Connection
 process.on("uncaughtException", (err) => {
     console.error("🔥 CRITICAL: Uncaught Exception caught:", err.stack || err);
 });
@@ -14,6 +14,13 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
 const fileUpload = require("express-fileupload");
+const cloudinary = require("cloudinary").v2;
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 const db = require("./db"); // Mongoose DB Connection
 require("./ping"); // Self keep-alive ping script every 5 minutes

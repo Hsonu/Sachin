@@ -8,7 +8,7 @@ if (!url) {
     console.error("❌ CRITICAL ERROR: MONGO_URI is not set in the environment variables!");
 } else {
     console.log("⏳ Connecting to MongoDB Atlas...");
-    mongoose.connect(url, { serverSelectionTimeoutMS: 5000 })
+    mongoose.connect(url, { serverSelectionTimeoutMS: 10000 })
         .then(() => {
             console.log("✅ MongoDB connected successfully to Atlas");
         })

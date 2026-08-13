@@ -2,6 +2,12 @@ const Product = require("../models/Product");
 const Category = require("../models/Category");
 const cloudinary = require("cloudinary").v2;
 
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+});
+
 // Get products with search, sorting, and filtering
 const getProducts = async (req, res, next) => {
     try {
