@@ -793,8 +793,7 @@
             cursor: pointer;
             padding: 8px 14px;
             border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border); background: #F1F5F9;
             transition: all var(--transition);
             user-select: none;
             max-width: 220px;
@@ -840,8 +839,7 @@
 
         .location-action {
             font-size: 0.8rem;
-            color: #fff;
-            font-weight: 700;
+            color: var(--text-body); font-weight: 700;
             letter-spacing: 0.01em;
             white-space: nowrap;
         }
@@ -1039,12 +1037,13 @@
         }
 
         #searchInput {
-            color: #ffffff !important;
-            background: rgba(255, 255, 255, 0.08) !important;
+            color: var(--text-body) !important;
+            background: #F1F5F9 !important;
+            border: 1.5px solid var(--border) !important;
         }
 
         #searchInput::placeholder {
-            color: rgba(255, 255, 255, 0.5) !important;
+            color: var(--text-muted) !important;
         }
 
 </style></head>
@@ -1172,7 +1171,7 @@
                     <input class="form-input" id="loginPassword" type="password" placeholder="Enter password" required style="width: 100%; border: 1.5px solid var(--border); border-radius: 8px; padding: 12px; outline: none; font-family: inherit; box-sizing: border-box;">
                 </div>
                 
-                <button class="btn-submit" type="submit" id="loginSubmitBtn" style="width: 100%; background: var(--gold); color: #fff; font-weight: 700; border-radius: 8px; padding: 14px; font-size: 0.9rem; text-transform: uppercase; transition: var(--transition); cursor: pointer; border: none;">Sign In</button>
+                <button class="btn-submit" type="submit" id="loginSubmitBtn" style="width: 100%; background: var(--gold); color: var(--text-body); font-weight: 700; border-radius: 8px; padding: 14px; font-size: 0.9rem; text-transform: uppercase; transition: var(--transition); cursor: pointer; border: none;">Sign In</button>
             </form>
 
             <!-- Register Form -->
@@ -1200,7 +1199,7 @@
                     <input class="form-input" id="regPassword" type="password" placeholder="Choose a password" required style="width: 100%; border: 1.5px solid var(--border); border-radius: 8px; padding: 12px; outline: none; font-family: inherit; box-sizing: border-box;">
                 </div>
 
-                <button class="btn-submit" type="submit" id="registerSubmitBtn" style="width: 100%; background: var(--gold); color: #fff; font-weight: 700; border-radius: 8px; padding: 14px; font-size: 0.9rem; text-transform: uppercase; transition: var(--transition); cursor: pointer; border: none;">Create Account</button>
+                <button class="btn-submit" type="submit" id="registerSubmitBtn" style="width: 100%; background: var(--gold); color: var(--text-body); font-weight: 700; border-radius: 8px; padding: 14px; font-size: 0.9rem; text-transform: uppercase; transition: var(--transition); cursor: pointer; border: none;">Create Account</button>
             </form>
 
             <p class="login-info" style="margin-top: 24px;">By signing in, you agree to our <a href="./termsOfService.html"

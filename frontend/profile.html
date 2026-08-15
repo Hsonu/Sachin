@@ -1071,8 +1071,7 @@
             cursor: pointer;
             padding: 8px 14px;
             border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border); background: #F1F5F9;
             transition: all var(--transition);
             user-select: none;
             max-width: 220px;
@@ -1118,8 +1117,7 @@
 
         .location-action {
             font-size: 0.8rem;
-            color: #fff;
-            font-weight: 700;
+            color: var(--text-body); font-weight: 700;
             letter-spacing: 0.01em;
             white-space: nowrap;
         }
@@ -1315,12 +1313,13 @@
         }
 
         #searchInput {
-            color: #ffffff !important;
-            background: rgba(255, 255, 255, 0.08) !important;
+            color: var(--text-body) !important;
+            background: #F1F5F9 !important;
+            border: 1.5px solid var(--border) !important;
         }
 
         #searchInput::placeholder {
-            color: rgba(255, 255, 255, 0.5) !important;
+            color: var(--text-muted) !important;
         }
 
 </style></head>
