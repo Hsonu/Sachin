@@ -12,15 +12,15 @@
   --gold-light: #E5D298; /* Soft golden tint */
   --gold-bg: rgba(217, 165, 42, 0.15); /* Translucent golden tint background surface */
   --gold-shadow: rgba(217, 165, 42, 0.25); /* Golden glow shadow */
-  --cream: #01150A; /* Dark theme background */
+  --cream: #FFFFFF; /* Dark theme background */
   --dark: #01150A; /* Dark background surface */
-  --dark-2: #17301C; /* Card background surface */
-  --dark-3: #22432a; /* Card hover surface */
-  --text-h: #FFFFFF; /* White heading text */
-  --text-body: #E0E7E1; /* High contrast body text */
-  --text-muted: #C4B873; /* Muted antique gold for labels */
-  --border: rgba(196, 184, 115, 0.35); /* Antique gold borders */
-  --white: #17301C; /* Card container background */
+  --dark-2: #F1F5F9; /* Card background surface */
+  --dark-3: #E2E8F0; /* Card hover surface */
+  --text-h: #01150A; /* White heading text */
+  --text-body: #1E293B; /* High contrast body text */
+  --text-muted: #64748B; /* Muted antique gold for labels */
+  --border: #E2E8F0; /* Antique gold borders */
+  --white: #FFFFFF; /* Card container background */
   --brand-green: #01150A;
   --deep-green: #17301C;
   --brand-gold: #D9A52A;
@@ -42,21 +42,21 @@
   /* Sidebar Layout Variables */
   --sb-width: 260px;
   --sb-bg: #01150A;
-  --sb-border: rgba(196, 184, 115, 0.25);
+  --sb-border: rgba(255, 255, 255, 0.1);
   --sb-text: #C4B873;
   --sb-text-active: #D9A52A;
   --sb-active-bg: rgba(217, 165, 42, 0.15);
 
   /* Topbar & Page Layout Variables */
-  --page-bg: #01150A;
+  --page-bg: #F8FAFC;
   --tb-height: 70px;
-  --tb-bg: #17301C;
-  --tb-border: rgba(196, 184, 115, 0.25);
-  --card-bg: #17301C;
+  --tb-bg: #FFFFFF;
+  --tb-border: #E2E8F0;
+  --card-bg: #FFFFFF;
 
   /* Form & Input Variables */
-  --input-bg: #01150A;
-  --input-border: rgba(196, 184, 115, 0.4);
+  --input-bg: #FFFFFF;
+  --input-border: #E2E8F0;
   --input-focus: #D9A52A;
   --primary: #D9A52A;
   --primary-dark: #9B751D;
