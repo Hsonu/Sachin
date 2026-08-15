@@ -318,6 +318,10 @@
               <textarea class="formTextarea" id="editDescription" placeholder="Product description…"
                 style="min-height: 80px;"></textarea>
             </div>
+            <div class="formGroup col-span-2">
+              <label class="formLabel">Product Information *</label>
+              <textarea class="formTextarea" id="editIngredients" placeholder="Ingredients: Milk, Sugar, Cardamom. FSSAI Certified • 100% Vegetarian dessert." style="min-height: 60px;"></textarea>
+            </div>
           </div>
         </div>
       </div>
@@ -415,7 +419,7 @@
         const sellPrice = Math.round(item.Rate * (1 - discount / 100) * (1 + gstPercent / 100));
         const totalAmount = item.Units * sellPrice;
 
-        return `<tr data-id="${item._id}" data-desc="${item.description || ''}" data-rate="${item.Rate}" data-gst="${gstPercent}" data-discount="${discount}">
+        return `<tr data-id="${item._id}" data-desc="${item.description || ''}" data-ingredients="${item.ingredients || ''}" data-rate="${item.Rate}" data-gst="${gstPercent}" data-discount="${discount}">
         <td><img class="productThumb" src="${item.photo}" alt="${item.Productname}" onerror="this.src='https://via.placeholder.com/40'"></td>
         <td class="colName" style="font-weight:600;color:#0f172a;">${item.Productname}</td>
         <td class="colCategory">${item.Category}</td>
@@ -464,6 +468,7 @@
           document.getElementById("editRate").value = rateVal;
           document.getElementById("editDiscount").value = discountVal;
           document.getElementById("editDescription").value = row.dataset.desc || "";
+          document.getElementById("editIngredients").value = row.dataset.ingredients || "";
 
           // Image Preview setup
           document.getElementById("editPreviewImg").src = row.querySelector(".productThumb").src;
@@ -534,6 +539,7 @@
         formData.append("Rate", rate);
         formData.append("discount", discount);
         formData.append("description", description);
+        formData.append("ingredients", document.getElementById("editIngredients").value.trim());
 
         if (editFillPhoto.files[0]) {
           formData.append("photo", editFillPhoto.files[0]);
@@ -560,6 +566,7 @@
           row.querySelector(".colUnits").textContent = updatedProduct.Units;
           row.querySelector(".productThumb").src = updatedProduct.photo;
           row.dataset.desc = updatedProduct.description;
+          row.dataset.ingredients = updatedProduct.ingredients || "";
           row.dataset.rate = updatedProduct.Rate;
           row.dataset.gst = updatedProduct.gst;
           row.dataset.discount = updatedProduct.discount;

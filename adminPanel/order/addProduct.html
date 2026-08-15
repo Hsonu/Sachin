@@ -179,6 +179,11 @@
                 <textarea class="formTextarea" id="inputDescription" placeholder="Describe the product…"></textarea>
               </div>
 
+              <div class="formGroup" style="margin-top:4px;">
+                <label class="formLabel" for="inputIngredients">Product Information *</label>
+                <textarea class="formTextarea" id="inputIngredients" placeholder="Ingredients: Milk, Sugar, Cardamom. FSSAI Certified • 100% Vegetarian dessert."></textarea>
+              </div>
+
               <!-- File Upload (Multiple) -->
               <div class="formGroup" style="margin-top:4px;">
                 <label class="formLabel">Product Images * <small
@@ -448,6 +453,7 @@
         formData.append("Rate", Number(inputRate.value));
         formData.append("Units", Number(inputUnits.value));
         formData.append("description", inputDescription.value);
+        formData.append("ingredients", document.getElementById("inputIngredients").value.trim() || "Milk, Cream, Sugar, Cardamom, Dry Fruits");
         formData.append("SubCategory", inputSubCategoryName.value);
         formData.append("gst", Number(inputGST.value));
         formData.append("discount", Number(document.getElementById("inputDiscount").value) || 0);
@@ -475,7 +481,7 @@
     });
 
     function clearForm() {
-      [inputProductName, inputCategoryName, inputSubCategoryName, inputUnits, inputRate, inputGST, inputDescription, document.getElementById("inputDiscount")].forEach(el => el && (el.value = ""));
+      [inputProductName, inputCategoryName, inputSubCategoryName, inputUnits, inputRate, inputGST, inputDescription, document.getElementById("inputDiscount"), document.getElementById("inputIngredients")].forEach(el => el && (el.value = ""));
       totalGST.value = ""; TotalAmount.value = "";
       document.getElementById("OriginalTotal").value = "";
       document.getElementById("DiscountAmount").value = "";
