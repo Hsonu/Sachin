@@ -30,16 +30,16 @@
             --gold: #D9A52A; /* Primary rich golden yellow accent */
             --gold-dark: #01150A; /* Main very dark Himalayan green */
             --gold-light: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-bg: #01150A; /* Background surface for modals / dark panels */
-            --cream: #01150A; /* Primary background color (dark theme) */
-            --dark: #01150A; /* Main brand dark background */
-            --dark-2: #17301C; /* Supporting deep natural green background */
-            --dark-3: #22432a; /* Mid-shade natural green for surfaces */
-            --text-h: #FFFFFF; /* Heading text (clean white for high contrast) */
-            --text-body: #FFFFFF; /* Body text (clean white for high contrast) */
-            --text-muted: #C4B873; /* Muted antique gold for labels, subtitles, details */
-            --border: #C4B873; /* Muted antique gold borders */
-            --white: #17301C; /* Deep green surface background for cards / sections */
+            --gold-bg: #FFFBEB; /* Light amber highlight bg */
+            --cream: #FFFFFF; /* Primary background color (light theme: white) */
+            --dark: #01150A; /* Main brand dark green (retained for buttons/accents) */
+            --dark-2: #01150A; /* Deep brand green for footer background */
+            --dark-3: #17301C; /* Supporting deep natural green */
+            --text-h: #01150A; /* Heading text (dark green/black for readability) */
+            --text-body: #1E293B; /* Body text (slate dark gray for readability) */
+            --text-muted: #64748B; /* Muted slate for subtitles/labels */
+            --border: #E2E8F0; /* Soft gray border instead of gold border */
+            --white: #FFFFFF; /* Pure white surface background for cards / sections */
             --brand-green: #01150A;
             --deep-green: #17301C;
             --brand-gold: #D9A52A;
@@ -178,9 +178,9 @@
             height: auto;
             min-height: var(--header-h);
             z-index: 1000;
-            background: rgba(13, 13, 15, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(217, 165, 42, 0.2);
+            border-bottom: 1px solid var(--border);
             transition: background var(--transition), backdrop-filter var(--transition), border-color var(--transition);
         }
 
@@ -250,24 +250,23 @@
 
         #searchInput {
             width: 100%;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1.5px solid rgba(217, 165, 42, 0.25);
+            background: #F1F5F9;
+            border: 1.5px solid var(--border);
             border-radius: 999px;
             padding: 9px 18px 9px 42px;
             font-size: 0.88rem;
-            color: #fff;
-            outline: none;
+            color: var(--text-body); outline: none;
             transition: all var(--transition);
             font-family: inherit;
         }
 
         #searchInput::placeholder {
-            color: rgba(255, 255, 255, 0.4);
+            color: var(--text-muted);
         }
 
         #searchInput:focus {
             border-color: var(--gold);
-            background: rgba(255, 255, 255, 0.12);
+            background: #FFFFFF;
             box-shadow: 0 0 0 3px rgba(217, 165, 42, 0.15);
         }
 
@@ -300,7 +299,7 @@
             border: 1.5px solid transparent;
             transition: border-color var(--transition), background var(--transition);
             cursor: pointer;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-body);
             font-size: 0.65rem;
             font-weight: 500;
             letter-spacing: 0.04em;
@@ -691,7 +690,7 @@
             width: 60px;
             height: 60px;
             border-radius: 6px;
-            background: linear-gradient(90deg, #17301C 25%, #22432a 50%, #17301C 75%);
+            background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
             background-size: 200%;
             animation: shimmer 1.4s infinite;
         }
@@ -706,7 +705,7 @@
 
         .skeleton-line {
             height: 10px;
-            background: linear-gradient(90deg, #17301C 25%, #22432a 50%, #17301C 75%);
+            background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
             background-size: 200%;
             animation: shimmer 1.4s infinite;
             border-radius: 5px;
@@ -914,7 +913,7 @@
         }
 
         .payBadge {
-            background: rgba(255, 255, 255, 0.08);
+            background: #F1F5F9;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 6px;
             padding: 4px 10px;

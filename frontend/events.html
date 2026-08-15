@@ -17,16 +17,16 @@
             --gold: #D9A52A; /* Primary rich golden yellow accent */
             --gold-dark: #01150A; /* Main very dark Himalayan green */
             --gold-light: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-bg: #01150A; /* Background surface for modals / dark panels */
-            --cream: #01150A; /* Primary background color (dark theme) */
-            --dark: #01150A; /* Main brand dark background */
-            --dark-2: #17301C; /* Supporting deep natural green background */
-            --dark-3: #22432a; /* Mid-shade natural green for surfaces */
-            --text-h: #FFFFFF; /* Heading text (clean white for high contrast) */
-            --text-body: #FFFFFF; /* Body text (clean white for high contrast) */
-            --text-muted: #C4B873; /* Muted antique gold for labels, subtitles, details */
-            --border: #C4B873; /* Muted antique gold borders */
-            --white: #17301C; /* Deep green surface background for cards / sections */
+            --gold-bg: #FFFBEB; /* Light amber highlight bg */
+            --cream: #FFFFFF; /* Primary background color (light theme: white) */
+            --dark: #01150A; /* Main brand dark green (retained for buttons/accents) */
+            --dark-2: #01150A; /* Deep brand green for footer background */
+            --dark-3: #17301C; /* Supporting deep natural green */
+            --text-h: #01150A; /* Heading text (dark green/black for readability) */
+            --text-body: #1E293B; /* Body text (slate dark gray for readability) */
+            --text-muted: #64748B; /* Muted slate for subtitles/labels */
+            --border: #E2E8F0; /* Soft gray border instead of gold border */
+            --white: #FFFFFF; /* Pure white surface background for cards / sections */
             --brand-green: #01150A;
             --deep-green: #17301C;
             --brand-gold: #D9A52A;
@@ -130,7 +130,7 @@
         }
 
         .nav-link {
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-body);
             font-size: 0.9rem;
             font-weight: 500;
             transition: var(--transition);
