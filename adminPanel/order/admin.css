@@ -155,7 +155,7 @@ input, select, textarea { font-family: inherit; }
   font-size: 0.62rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--sb-text);
   margin-top: 1px;
 }
 
@@ -184,8 +184,7 @@ input, select, textarea { font-family: inherit; }
   gap: 10px;
   padding: 10px 12px;
   border-radius: var(--radius-sm);
-  color: var(--text-body);
-  font-size: 0.83rem;
+  color: var(--sb-text); font-size: 0.83rem;
   font-weight: 500;
   transition: background var(--transition), color var(--transition);
   margin-bottom: 2px;
@@ -249,7 +248,7 @@ input, select, textarea { font-family: inherit; }
 
 .sidebarUserName {
   font-size: 0.82rem; font-weight: 600;
-  color: var(--text-h);
+  color: #FFFFFF;
 }
 
 .sidebarUserRole {
@@ -487,7 +486,7 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--radius-sm);
   padding: 10px 13px;
   font-size: 0.88rem;
-  color: #FFFFFF !important;
+  color: var(--text-body) !important;
   transition: border-color var(--transition), box-shadow var(--transition);
   outline: none;
 }
@@ -971,13 +970,13 @@ input, select, textarea { font-family: inherit; }
            INPUT TEXT COLOR FIX (HIGH CONTRAST)
         ═══════════════════════════════════════════ */
         input:not(#searchInput), textarea, select, .form-input {
-            color: #FFFFFF !important;
-            background-color: #17301C !important;
-            border: 1px solid var(--border) !important;
+            color: var(--text-body) !important;
+            background-color: #ffffff !important;
+            border: 1.5px solid var(--border) !important;
         }
 
         input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
-            color: #C4B873 !important;
+            color: var(--text-muted) !important;
             opacity: 0.8 !important;
         }
 
