@@ -1,1 +1,8 @@
 node_modules
+backend/tmp
+tmp
+.env
+backend/.env
+scratch
+uploads
+
