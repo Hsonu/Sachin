@@ -74,16 +74,27 @@
       gap: 12px;
     }
 
+    .sidebar-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .sidebarLogoMark {
-      width: 40px;
-      height: 40px;
+      width: 40px; height: 40px;
+      background: transparent;
       border-radius: 10px;
-      background: linear-gradient(135deg, #17301C, #01150A);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 4px 14px rgba(217, 165, 42, 0.2);
+      overflow: hidden;
+    }
+
+    .sidebar-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .sidebarLogoMark svg {
@@ -518,9 +529,9 @@
 
   <aside class="sidebar">
     <div class="sidebarTop">
-      <div class="sidebarLogoMark"><svg viewBox="0 0 24 24">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-        </svg></div>
+      <div class="sidebarLogoMark">
+        <img src="/logo.jpg" alt="Himalaya Kulfi Logo" class="sidebar-logo-img">
+      </div>
       <div>
         <div class="sidebarBrandName">Himalaya Kulfi</div>
         <div class="sidebarBrandRole">Owner Panel</div>
