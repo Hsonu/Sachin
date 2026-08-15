@@ -65,7 +65,8 @@ const getProducts = async (req, res, next) => {
             query.isBestseller = true;
         }
 
-        // Admin Isolation header logic (for backwards compatibility if x-admin-id is passed)
+        // Admin Isolation header logic (disabled so admins can see and edit all products)
+        /*
         const adminId = req.headers["x-admin-id"];
         if (adminId) {
             query.$or = [
@@ -73,6 +74,7 @@ const getProducts = async (req, res, next) => {
                 ...(adminId === "admin" ? [{ createdBy: { $exists: false } }, { createdBy: null }] : [])
             ];
         }
+        */
 
         // Build Sort Options
         let sortOption = {};
