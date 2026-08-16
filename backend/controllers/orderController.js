@@ -36,12 +36,12 @@ const sendOrderNotifications = async (savedOrder) => {
     const totalDisplay = (savedOrder.withGstTotalAmount || savedOrder.totalAmount).toLocaleString("en-IN");
 
     // 1. Send Email Notification
-    const emailSubject = `Himalaya Kulfi - New Order Placed: ${savedOrder._id}`;
+    const emailSubject = `Himalayan Kulfi - New Order Placed: ${savedOrder._id}`;
     const emailHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; border: 1px solid #2E5A44; padding: 20px; border-radius: 8px; background-color: #FCF8F2;">
             <h2 style="color: #2E5A44; text-align: center; border-bottom: 2px solid #2E5A44; padding-bottom: 10px; font-family: Georgia, serif;">New Dessert Order Received!</h2>
             <p>Hello Admin,</p>
-            <p>A new order has been placed on <strong>Himalaya Kulfi</strong>. Here are the details:</p>
+            <p>A new order has been placed on <strong>Himalayan Kulfi</strong>. Here are the details:</p>
             
             <h3 style="color: #3D2314;">Order Summary</h3>
             <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
@@ -67,7 +67,7 @@ const sendOrderNotifications = async (savedOrder) => {
                 <tr style="background-color: #f9f9f9;"><th style="text-align:left;padding:8px;border:1px solid #ddd;">Delivery Address</th><td style="padding:8px;border:1px solid #ddd;">${savedOrder.customerAdd}</td></tr>
             </table>
             
-            <p style="margin-top: 20px; font-size: 0.9em; color: #8E7A6E; text-align: center;">Himalaya Kulfi E-Commerce Order System</p>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #8E7A6E; text-align: center;">Himalayan Kulfi E-Commerce Order System</p>
         </div>
     `;
 
@@ -77,10 +77,10 @@ const sendOrderNotifications = async (savedOrder) => {
         subject: emailSubject,
         html: emailHtml
     }).then(() => console.log(`✅ Order notification email sent to ${adminEmail}`))
-      .catch(err => console.error("❌ Failed to send email notification:", err.message));
+        .catch(err => console.error("❌ Failed to send email notification:", err.message));
 
     // 2. Send WhatsApp Notification
-    const whatsappMsg = `🔔 *New Himalaya Kulfi Order Received!*\n\n*Order ID:* ${savedOrder._id}\n*Customer:* ${savedOrder.customerName || savedOrder.name}\n*Phone:* ${savedOrder.customerMobileNumber || savedOrder.phone}\n*Products:*${itemsText}\n*Final Amount:* ₹${totalDisplay}\n*Payment Method:* ${savedOrder.paymentMethod}\n*Address:* ${savedOrder.customerAdd}`;
+    const whatsappMsg = `🔔 *New Himalayan Kulfi Order Received!*\n\n*Order ID:* ${savedOrder._id}\n*Customer:* ${savedOrder.customerName || savedOrder.name}\n*Phone:* ${savedOrder.customerMobileNumber || savedOrder.phone}\n*Products:*${itemsText}\n*Final Amount:* ₹${totalDisplay}\n*Payment Method:* ${savedOrder.paymentMethod}\n*Address:* ${savedOrder.customerAdd}`;
     sendWhatsAppSMS(targetWhatsApp, whatsappMsg);
 };
 
@@ -104,7 +104,7 @@ const placeOrder = async (req, res, next) => {
 
         const activePhone = customerMobileNumber || req.body.phone || req.body.useNumber;
         const activeName = customerName || req.body.name;
-        
+
         if (!activePhone) {
             return res.status(401).json({ message: "Please log in to place an order." });
         }
@@ -170,7 +170,7 @@ const placeOrder = async (req, res, next) => {
                 mainRate = orderItems[0].price;
                 mainQty = orderItems.reduce((acc, curr) => acc + curr.qty, 0);
             }
-        } 
+        }
         // 2. Process Single Product Checkout (legacy compatibility)
         else if (mainProductName) {
             const product = await Product.findOne({ Productname: mainProductName });
@@ -256,7 +256,7 @@ const placeOrder = async (req, res, next) => {
         const savedOrder = await newOrder.save();
 
         console.log(`[Order Controller] Order placed successfully: ${savedOrder._id}`);
-        
+
         // Dispatch notifications asynchronously
         sendOrderNotifications(savedOrder).catch(e => console.error(e));
 
@@ -307,7 +307,7 @@ const getOrderById = async (req, res, next) => {
         // Validate access permissions (only customer or admin/owner)
         const adminId = req.headers["x-admin-id"];
         const userNumber = req.headers["x-user-number"] || (req.user ? req.user.phone : null);
-        
+
         if (!adminId && userNumber) {
             const isOwnerOfOrder = String(order.phone) === String(userNumber) || String(order.customerMobileNumber) === String(userNumber);
             if (!isOwnerOfOrder) {
@@ -382,7 +382,7 @@ const updateOrderStatus = async (req, res, next) => {
 
         if (previousStatus !== newStatus) {
             const isCancelled = (s) => (s || "").toLowerCase() === "cancelled";
-            
+
             // If transition TO Cancelled from active state -> restore stock
             if (isCancelled(newStatus) && !isCancelled(previousStatus)) {
                 if (order.items && order.items.length > 0) {
@@ -398,7 +398,7 @@ const updateOrderStatus = async (req, res, next) => {
                         { $inc: { Units: order.qty } }
                     );
                 }
-            } 
+            }
             // If transition FROM Cancelled back to active -> check and deduct stock
             else if (!isCancelled(newStatus) && isCancelled(previousStatus)) {
                 if (order.items && order.items.length > 0) {

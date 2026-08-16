@@ -1,7 +1,7 @@
 (function () {
     // 1. Detect if the current page is a login page
     const pathname = window.location.pathname.toLowerCase();
-    const isLoginPage = 
+    const isLoginPage =
         pathname.endsWith("/owner") ||
         pathname.endsWith("/owner/") ||
         pathname.includes("owner-login.html") ||
@@ -79,7 +79,7 @@
     const originalFetch = window.fetch;
     window.fetch = async function (resource, options = {}) {
         options.headers = options.headers || {};
-        
+
         // Convert headers to a standard plain object for manipulation
         let headersObj = {};
         if (options.headers instanceof Headers) {
@@ -145,9 +145,9 @@
         }
         requestUrl = requestUrl.toLowerCase();
 
-        const isAuthRequest = 
-            requestUrl.includes("/login") || 
-            requestUrl.includes("/newuser") || 
+        const isAuthRequest =
+            requestUrl.includes("/login") ||
+            requestUrl.includes("/newuser") ||
             requestUrl.includes("/send-otp") ||
             requestUrl.includes("/card");
 
@@ -374,15 +374,15 @@
             <div id="pwaInstallBanner" class="pwa-install-banner" aria-live="polite" aria-label="Install App">
                 <div class="pwa-header">
                     <div class="pwa-icon-wrap">
-                        <img src="./icon-192.png" alt="Himalaya Kulfi Logo">
+                        <img src="./icon-192.png" alt="Himalayan Kulfi Logo">
                     </div>
                     <div class="pwa-title-group">
-                        <span class="pwa-title">Himalaya Kulfi</span>
+                        <span class="pwa-title">Himalayan Kulfi</span>
                         <span class="pwa-subtitle" id="pwaSubtitle">Official App</span>
                     </div>
                 </div>
                 <div class="pwa-body-text" id="pwaBodyText">
-                    Add Himalaya Kulfi to your home screen for quick access to collections, seamless checkout, and offline updates.
+                    Add Himalayan Kulfi to your home screen for quick access to collections, seamless checkout, and offline updates.
                 </div>
                 <div class="pwa-actions">
                     <button id="pwaBtnDismiss" class="pwa-btn-dismiss">Not Now</button>
@@ -430,7 +430,7 @@
             const wrapper = document.createElement("div");
             wrapper.innerHTML = installBtnHTML;
             const btnNode = wrapper.firstElementChild;
-            
+
             // Insert it before the Cart button or at the end
             const navCartBtn = document.getElementById("navCartBtn") || navActions.lastElementChild;
             if (navCartBtn) {
@@ -447,7 +447,7 @@
         const btnDismiss = document.getElementById('pwaBtnDismiss');
         const navInstallBtn = document.getElementById('navPwaInstallBtn');
         const navInstallText = document.getElementById('navPwaInstallText');
-        
+
         const iosSheet = document.getElementById('pwaIosSheet');
         const iosCloseBtn = document.getElementById('iosCloseBtn');
 
@@ -460,59 +460,23 @@
         const oneWeek = 7 * 24 * 60 * 60 * 1000;
         const shouldShowPrompt = !isDismissed || (dismissedTime && (Date.now() - Number(dismissedTime) > oneWeek));
 
-        // Function to trigger APK Download
-        function triggerApkDownload() {
-            console.log('[PWA] Triggering APK Download...');
-            const link = document.createElement('a');
-            link.href = './himalaya-kulfi.apk';
-            link.download = 'himalaya-kulfi.apk';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
+        // Standard PWA flow (Desktop & Android)
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
 
-        // Dynamic customizations for Android users
-        if (isAndroid) {
-            // Update bottom banner text for Android
-            const subtitleEl = document.getElementById('pwaSubtitle');
-            if (subtitleEl) subtitleEl.textContent = 'Official Android App';
-            const bodyEl = document.getElementById('pwaBodyText');
-            if (bodyEl) bodyEl.textContent = 'Download the official Himalaya Kulfi Android app directly to your device.';
-            if (btnInstall) btnInstall.textContent = 'Download App';
-            
-            // Update navbar install text for Android
-            if (navInstallText) navInstallText.textContent = 'Download';
-
-            // Show navbar option immediately for Android (so they can always download it)
+            // Show navbar install option
             if (navInstallBtn && !isStandalone) {
                 navInstallBtn.style.display = 'flex';
             }
 
-            // Show bottom popup banner after 2s
+            // Show bottom popup banner
             if (shouldShowPrompt && pwaBanner && !isStandalone) {
                 setTimeout(() => {
                     pwaBanner.classList.add('show');
                 }, 2000);
             }
-        } else {
-            // Standard PWA flow (Desktop)
-            window.addEventListener('beforeinstallprompt', (e) => {
-                e.preventDefault();
-                deferredPrompt = e;
-
-                // Show navbar install option
-                if (navInstallBtn && !isStandalone) {
-                    navInstallBtn.style.display = 'flex';
-                }
-
-                // Show bottom popup banner
-                if (shouldShowPrompt && pwaBanner && !isStandalone) {
-                    setTimeout(() => {
-                        pwaBanner.classList.add('show');
-                    }, 2000);
-                }
-            });
-        }
+        });
 
         // 2. iOS handler
         if (isIOS && !isStandalone) {
@@ -530,11 +494,6 @@
         // Install Button (Android/iOS/Desktop) Click
         if (btnInstall) {
             btnInstall.addEventListener('click', async () => {
-                if (isAndroid) {
-                    pwaBanner.classList.remove('show');
-                    triggerApkDownload();
-                    return;
-                }
                 if (isIOS) {
                     pwaBanner.classList.remove('show');
                     if (iosSheet) iosSheet.classList.add('show');
@@ -554,10 +513,6 @@
         if (navInstallBtn) {
             navInstallBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                if (isAndroid) {
-                    triggerApkDownload();
-                    return;
-                }
                 if (isIOS) {
                     if (iosSheet) iosSheet.classList.add('show');
                     return;

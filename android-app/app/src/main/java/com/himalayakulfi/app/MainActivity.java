@@ -63,7 +63,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "HIMALAYA_KULFI";
+    private static final String TAG = "Himalayan_KULFI";
     private static final int FILE_CHOOSER_REQUEST = 1001;
     private static final int CAMERA_PERMISSION_REQUEST = 2001;
     private static final int STORAGE_PERMISSION_REQUEST = 2002;
@@ -368,7 +368,7 @@ public class MainActivity extends AppCompatActivity {
 
     private File createImageFile() throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
-        String imageFileName = "HIMALAYAKULFI_" + timeStamp + "_";
+        String imageFileName = "Himalayan_KULFI_" + timeStamp + "_";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         return File.createTempFile(imageFileName, ".jpg", storageDir);
     }
@@ -447,7 +447,7 @@ public class MainActivity extends AppCompatActivity {
                     request.setNotificationVisibility(
                             DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                     request.setDestinationInExternalPublicDir(
-                            Environment.DIRECTORY_DOWNLOADS, "HimalayaKulfi/" + fileName);
+                            Environment.DIRECTORY_DOWNLOADS, "HimalayanKulfi/" + fileName);
 
                     DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
                     if (dm != null) {

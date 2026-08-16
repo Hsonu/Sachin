@@ -125,7 +125,7 @@ app.post("/newUser/:userNumber", async (req, res, next) => {
         // Create virtual password/user to allow backward compatibility
         const virtualUser = new User({
             name: `Customer_${phone.substring(6)}`,
-            email: `customer_${phone}@himalayakulfi.com`,
+            email: `customer_${phone}@Himalayankulfi.com`,
             phone,
             password: `virtual_pass_${phone}` // hashes automatically in pre-save hook
         });
@@ -212,7 +212,7 @@ app.post("/newClient", async (req, res, next) => {
         const enquiry = await EventBooking.create({
             name: FullName,
             mobile: String(mobileNumber),
-            email: email || "customer@himalayakulfi.com",
+            email: email || "customer@Himalayankulfi.com",
             eventType: "Other Event",
             eventDate: new Date(),
             guests: 10,
@@ -578,7 +578,7 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
     console.log(`===================================================`);
-    console.log(`Himalaya Kulfi Server running on port ${port}`);
+    console.log(`Himalayan Kulfi Server running on port ${port}`);
     console.log(`URL: http://localhost:${port}`);
     console.log(`===================================================`);
 });

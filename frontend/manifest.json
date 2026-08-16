@@ -1,13 +1,15 @@
 {
-  "name": "Himalaya Kulfi",
-  "short_name": "Himalaya Kulfi",
-  "description": "Discover the finest premium traditional Indian kulfi & desserts at Himalaya Kulfi.",
+  "name": "Himalayan Kulfi",
+  "short_name": "Himalayan Kulfi",
+  "description": "Discover the finest premium traditional Indian kulfi & desserts at Himalayan Kulfi.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0d0d0f",
   "theme_color": "#c9a96e",
   "orientation": "portrait-primary",
-  "categories": ["shopping"],
+  "categories": [
+    "shopping"
+  ],
   "icons": [
     {
       "src": "icon-192.png",

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'himalaya-kulfi-cache-v13';
+const CACHE_NAME = 'Himalayan-kulfi-cache-v13';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

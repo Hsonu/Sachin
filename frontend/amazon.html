@@ -9,36 +9,52 @@
     <meta name="theme-color" content="#01150A">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Himalaya Kulfi">
+    <meta name="apple-mobile-web-app-title" content="Himalayan Kulfi">
     <link rel="apple-touch-icon" href="icon-192.png">
     <title>Amazon.in – Shop Online</title>
     <script src="/auto-logout.js"></script>
-    <meta name="description" content="Shop online at Amazon India. Great prices, fast delivery, and millions of products.">
+    <meta name="description"
+        content="Shop online at Amazon India. Great prices, fast delivery, and millions of products.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-            --gold: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-dark: #01150A; /* Main very dark Himalayan green */
-            --gold-light: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-bg: #FFFBEB; /* Light amber highlight bg */
-            --cream: #FFFFFF; /* Primary background color (light theme: white) */
-            --dark: #01150A; /* Main brand dark green (retained for buttons/accents) */
-            --dark-2: #01150A; /* Deep brand green for footer background */
-            --dark-3: #17301C; /* Supporting deep natural green */
-            --text-h: #01150A; /* Heading text (dark green/black for readability) */
-            --text-body: #1E293B; /* Body text (slate dark gray for readability) */
-            --text-muted: #64748B; /* Muted slate for subtitles/labels */
-            --border: #E2E8F0; /* Soft gray border instead of gold border */
-            --white: #FFFFFF; /* Pure white surface background for cards / sections */
+            --gold: #D9A52A;
+            /* Primary rich golden yellow accent */
+            --gold-dark: #01150A;
+            /* Main very dark Himalayan green */
+            --gold-light: #D9A52A;
+            /* Primary rich golden yellow accent */
+            --gold-bg: #FFFBEB;
+            /* Light amber highlight bg */
+            --cream: #FFFFFF;
+            /* Primary background color (light theme: white) */
+            --dark: #01150A;
+            /* Main brand dark green (retained for buttons/accents) */
+            --dark-2: #01150A;
+            /* Deep brand green for footer background */
+            --dark-3: #17301C;
+            /* Supporting deep natural green */
+            --text-h: #01150A;
+            /* Heading text (dark green/black for readability) */
+            --text-body: #1E293B;
+            /* Body text (slate dark gray for readability) */
+            --text-muted: #64748B;
+            /* Muted slate for subtitles/labels */
+            --border: #E2E8F0;
+            /* Soft gray border instead of gold border */
+            --white: #FFFFFF;
+            /* Pure white surface background for cards / sections */
             --brand-green: #01150A;
             --deep-green: #17301C;
             --brand-gold: #D9A52A;
@@ -69,8 +85,13 @@
         }
 
         @keyframes stripPulse {
-            from { opacity: 0.92; }
-            to { opacity: 1; }
+            from {
+                opacity: 0.92;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         /* ── MAIN NAVBAR ── */
@@ -79,7 +100,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.45);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
         }
 
         #navInner {
@@ -144,7 +165,7 @@
 
         #addressGroup:hover {
             border-color: var(--amazon-accent);
-            background: rgba(255,255,255,0.04);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         #addressTop {
@@ -259,7 +280,7 @@
 
         .navAction:hover {
             border-color: var(--amazon-accent);
-            background: rgba(255,255,255,0.04);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         .navAction-top {
@@ -327,7 +348,7 @@
 
         #cartGroup:hover {
             border-color: var(--amazon-accent);
-            background: rgba(255,255,255,0.04);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         #cartIcon {
@@ -354,12 +375,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: badgePop 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+            animation: badgePop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         @keyframes badgePop {
-            from { transform: scale(0); }
-            to { transform: scale(1); }
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
         }
 
         #cartText {
@@ -432,8 +458,8 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at 20% 50%, rgba(254,189,105,0.08) 0%, transparent 60%),
-                        radial-gradient(ellipse at 80% 20%, rgba(55,180,232,0.08) 0%, transparent 60%);
+            background: radial-gradient(ellipse at 20% 50%, rgba(254, 189, 105, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(55, 180, 232, 0.08) 0%, transparent 60%);
             pointer-events: none;
         }
 
@@ -481,7 +507,7 @@
 
         #heroCta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(254,189,105,0.4);
+            box-shadow: 0 12px 28px rgba(254, 189, 105, 0.4);
         }
 
         /* ── MOBILE HAMBURGER ── */
@@ -512,8 +538,13 @@
 
         /* ── RESPONSIVE ── */
         @media (max-width: 960px) {
-            #addressGroup { display: none; }
-            #langGroup { display: none; }
+            #addressGroup {
+                display: none;
+            }
+
+            #langGroup {
+                display: none;
+            }
 
             #navInner {
                 flex-wrap: wrap;
@@ -532,21 +563,40 @@
         }
 
         @media (max-width: 600px) {
-            #cartText { display: none; }
-            #announcementStrip { font-size: 0.72rem; padding: 5px 12px; }
-            #categoryInner { padding: 0 10px; gap: 0; }
-            .catItem { padding: 8px 9px; font-size: 0.75rem; }
+            #cartText {
+                display: none;
+            }
+
+            #announcementStrip {
+                font-size: 0.72rem;
+                padding: 5px 12px;
+            }
+
+            #categoryInner {
+                padding: 0 10px;
+                gap: 0;
+            }
+
+            .catItem {
+                padding: 8px 9px;
+                font-size: 0.75rem;
+            }
         }
-    
+
         /* ═══════════════════════════════════════════
            INPUT TEXT COLOR FIX (HIGH CONTRAST)
         ═══════════════════════════════════════════ */
-        input:not(#searchInput), textarea, select, .form-input {
+        input:not(#searchInput),
+        textarea,
+        select,
+        .form-input {
             color: #111111 !important;
             background-color: #ffffff !important;
         }
 
-        input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
+        input:not(#searchInput)::placeholder,
+        textarea::placeholder,
+        .form-input::placeholder {
             color: #777777 !important;
             opacity: 1 !important;
         }
@@ -560,8 +610,8 @@
         #searchInput::placeholder {
             color: var(--text-muted) !important;
         }
-
-</style></head>
+    </style>
+</head>
 
 <body>
 
@@ -592,7 +642,8 @@
             <div id="addressGroup" role="button" tabindex="0" aria-label="Delivery location">
                 <div id="addressTop">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                     </svg>
                     Deliver to Mumbai
                 </div>
@@ -613,17 +664,20 @@
                     <option value="grocery">Grocery</option>
                     <option value="toys">Toys</option>
                 </select>
-                <input id="searchInput" type="text" placeholder="Search Amazon.in" autocomplete="off" aria-label="Search products">
+                <input id="searchInput" type="text" placeholder="Search Amazon.in" autocomplete="off"
+                    aria-label="Search products">
                 <button id="searchBtn" type="button" aria-label="Search">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="#111" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                        <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="#111"
+                            stroke-width="2.2" stroke-linecap="round" fill="none" />
                     </svg>
                 </button>
             </div>
 
             <!-- Language -->
             <div id="langGroup" role="button" tabindex="0" aria-label="Language: English">
-                <img id="flagImg" src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India flag">
+                <img id="flagImg" src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
+                    alt="India flag">
                 <span id="langText">EN</span>
                 <span id="langArrow">▾</span>
             </div>
@@ -644,9 +698,11 @@
             <a id="cartGroup" href="#" aria-label="Shopping cart with 3 items">
                 <div id="cartIcon">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-                        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M16 10a4 4 0 01-8 0" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="currentColor"
+                            stroke-width="1.5" fill="none" stroke-linejoin="round" />
+                        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M16 10a4 4 0 01-8 0" stroke="currentColor" stroke-width="1.5" fill="none"
+                            stroke-linecap="round" />
                     </svg>
                     <span id="cartBadge" aria-hidden="true">3</span>
                 </div>
@@ -680,8 +736,9 @@
         <p>Fast delivery, easy returns, and unbeatable prices — all in one place. Join 500M+ happy customers.</p>
         <a id="heroCta" href="#">
             Start Shopping
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
         </a>
     </section>
@@ -748,13 +805,13 @@
 
     <!-- PWA Service Worker Registration -->
     <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('./service-worker.js')
-                .then(function(reg) { console.log('[SW] Registered:', reg.scope); })
-                .catch(function(err) { console.error('[SW] Failed:', err); });
-        });
-    }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(function (reg) { console.log('[SW] Registered:', reg.scope); })
+                    .catch(function (err) { console.error('[SW] Failed:', err); });
+            });
+        }
     </script>
 </body>
 

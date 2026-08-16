@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himalaya Kulfi</title>
+    <title>Himalayan Kulfi</title>
     <script src="/auto-logout.js"></script>
     <meta name="description"
-        content="Discover the finest premium traditional Indian kulfi & desserts at Himalaya Kulfi. Freshly frozen and delivered directly to your doorstep.">
+        content="Discover the finest premium traditional Indian kulfi & desserts at Himalayan Kulfi. Freshly frozen and delivered directly to your doorstep.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,7 +19,7 @@
     <meta name="theme-color" content="#01150A">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Himalaya Kulfi">
+    <meta name="apple-mobile-web-app-title" content="Himalayan Kulfi">
     <link rel="apple-touch-icon" href="icon-192.png">
 
     <style>
@@ -27,19 +27,32 @@
            DESIGN TOKENS
         ═══════════════════════════════════════════ */
         :root {
-            --gold: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-dark: #01150A; /* Main very dark Himalayan green */
-            --gold-light: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-bg: #FFFBEB; /* Light amber highlight bg */
-            --cream: #FFFFFF; /* Primary background color (light theme: white) */
-            --dark: #01150A; /* Main brand dark green (retained for buttons/accents) */
-            --dark-2: #01150A; /* Deep brand green for footer background */
-            --dark-3: #17301C; /* Supporting deep natural green */
-            --text-h: #01150A; /* Heading text (dark green/black for readability) */
-            --text-body: #1E293B; /* Body text (slate dark gray for readability) */
-            --text-muted: #64748B; /* Muted slate for subtitles/labels */
-            --border: #E2E8F0; /* Soft gray border instead of gold border */
-            --white: #FFFFFF; /* Pure white surface background for cards / sections */
+            --gold: #D9A52A;
+            /* Primary rich golden yellow accent */
+            --gold-dark: #01150A;
+            /* Main very dark Himalayan green */
+            --gold-light: #D9A52A;
+            /* Primary rich golden yellow accent */
+            --gold-bg: #FFFBEB;
+            /* Light amber highlight bg */
+            --cream: #FFFFFF;
+            /* Primary background color (light theme: white) */
+            --dark: #01150A;
+            /* Main brand dark green (retained for buttons/accents) */
+            --dark-2: #01150A;
+            /* Deep brand green for footer background */
+            --dark-3: #17301C;
+            /* Supporting deep natural green */
+            --text-h: #01150A;
+            /* Heading text (dark green/black for readability) */
+            --text-body: #1E293B;
+            /* Body text (slate dark gray for readability) */
+            --text-muted: #64748B;
+            /* Muted slate for subtitles/labels */
+            --border: #E2E8F0;
+            /* Soft gray border instead of gold border */
+            --white: #FFFFFF;
+            /* Pure white surface background for cards / sections */
             --brand-green: #01150A;
             --deep-green: #17301C;
             --brand-gold: #D9A52A;
@@ -215,7 +228,8 @@
             border-radius: 999px;
             padding: 9px 18px 9px 42px;
             font-size: 0.88rem;
-            color: var(--text-body); outline: none;
+            color: var(--text-body);
+            outline: none;
             transition: all var(--transition);
             font-family: inherit;
         }
@@ -332,7 +346,11 @@
             height: calc(100vh - var(--header-h));
             min-height: 500px;
             margin-top: var(--header-h);
-            background: var(--cream); display: flex; align-items: center; justify-content: center; overflow: hidden;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
             border-bottom: 1px solid var(--border);
         }
 
@@ -368,12 +386,11 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to bottom, 
-                rgba(255, 255, 255, 0.2) 0%, 
-                rgba(255, 255, 255, 0) 20%, 
-                rgba(255, 255, 255, 0) 80%, 
-                rgba(255, 255, 255, 0.3) 100%
-            );
+            background: linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0) 20%,
+                    rgba(255, 255, 255, 0) 80%,
+                    rgba(255, 255, 255, 0.3) 100%);
             z-index: 3;
             pointer-events: none;
         }
@@ -461,7 +478,7 @@
             letter-spacing: 0.18em;
             text-transform: uppercase;
             font-weight: 700;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             pointer-events: auto;
             transition: color var(--transition);
@@ -484,9 +501,12 @@
         }
 
         @keyframes scrollBounce {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateX(-50%) translateY(0);
             }
+
             50% {
                 transform: translateX(-50%) translateY(6px);
             }
@@ -497,14 +517,17 @@
                 height: 60vh;
                 min-height: 400px;
             }
+
             .heroContainer {
                 width: 92%;
                 height: 85%;
             }
+
             .heroThumb {
                 width: 56px;
                 height: 56px;
             }
+
             .heroSliderNav {
                 bottom: 80px;
             }
@@ -515,6 +538,7 @@
                 height: 50vh;
                 min-height: 350px;
             }
+
             .heroThumb {
                 width: 48px;
                 height: 48px;
@@ -685,7 +709,10 @@
             position: relative;
             overflow: hidden;
             height: 280px;
-            background: #F1F5F9; } .card-img-overlay {
+            background: #F1F5F9;
+        }
+
+        .card-img-overlay {
             position: absolute;
             inset: 0;
             background: rgba(13, 13, 15, 0.25);
@@ -1330,7 +1357,8 @@
             cursor: pointer;
             padding: 8px 14px;
             border-radius: 10px;
-            border: 1px solid var(--border); background: #F1F5F9;
+            border: 1px solid var(--border);
+            background: #F1F5F9;
             transition: all var(--transition);
             user-select: none;
             max-width: 220px;
@@ -1376,7 +1404,8 @@
 
         .location-action {
             font-size: 0.8rem;
-            color: var(--text-body); font-weight: 700;
+            color: var(--text-body);
+            font-weight: 700;
             letter-spacing: 0.01em;
             white-space: nowrap;
         }
@@ -1642,16 +1671,21 @@
             letter-spacing: 0.02em;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
-    
+
         /* ═══════════════════════════════════════════
            INPUT TEXT COLOR FIX (HIGH CONTRAST)
         ═══════════════════════════════════════════ */
-        input:not(#searchInput), textarea, select, .form-input {
+        input:not(#searchInput),
+        textarea,
+        select,
+        .form-input {
             color: #111111 !important;
             background-color: #ffffff !important;
         }
 
-        input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
+        input:not(#searchInput)::placeholder,
+        textarea::placeholder,
+        .form-input::placeholder {
             color: #777777 !important;
             opacity: 1 !important;
         }
@@ -1665,11 +1699,11 @@
         #searchInput::placeholder {
             color: var(--text-muted) !important;
         }
-
-</style></head>
+    </style>
+</head>
 
 <body>
-    
+
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/918603632642?text=Hello,%20I%20am%20interested%20in%20your%20kulfi%20products.%20Could%20you%20please%20provide%20more%20details?"
@@ -1682,10 +1716,10 @@
         <div id="navInner">
 
             <!-- Logo -->
-            <a id="navLogo" href="./index.html" aria-label="Himalaya Kulfi Home">
-                <img class="brand-logo-img" src="./logo.jpg" alt="Himalaya Kulfi Logo">
+            <a id="navLogo" href="./index.html" aria-label="Himalayan Kulfi Home">
+                <img class="brand-logo-img" src="./logo.jpg" alt="Himalayan Kulfi Logo">
                 <div class="brand-text">
-                    <span class="brand-name">Himalaya Kulfi <br class="mobile-br">Desserts</span>
+                    <span class="brand-name">Himalayan Kulfi <br class="mobile-br">Desserts</span>
                     <span class="brand-tagline">Pure Royal Tradition</span>
                 </div>
             </a>
@@ -1709,8 +1743,8 @@
                     <circle cx="11" cy="11" r="8" />
                     <path d="M21 21l-4.35-4.35" />
                 </svg>
-                <input id="searchInput" type="text" placeholder="Search malai, mango, kesar pista kulfi…" autocomplete="off"
-                    aria-label="Search products">
+                <input id="searchInput" type="text" placeholder="Search malai, mango, kesar pista kulfi…"
+                    autocomplete="off" aria-label="Search products">
             </div>
 
             <!-- Actions -->
@@ -1850,7 +1884,7 @@
 
                 <!-- Brand -->
                 <div class="footerBrand">
-                    <div class="footerLogo">Himalaya Kulfi</div>
+                    <div class="footerLogo">Himalayan Kulfi</div>
                     <p class="footerDesc">Delivering royal Indian kulfi and traditional desserts frozen to perfection.
                         Handcrafted with passion, delivered with pride.</p>
                     <div class="footerSocial">
@@ -1912,7 +1946,7 @@
             </div>
 
             <div class="footerBottom">
-                <p class="footerCopy">&copy; 2026 <span>Himalaya Kulfi</span>. All Rights Reserved. Crafted with ♥</p>
+                <p class="footerCopy">&copy; 2026 <span>Himalayan Kulfi</span>. All Rights Reserved. Crafted with ♥</p>
                 <div
                     style="font-size: 0.8rem; color: #a8854e; text-align: center; margin-top: 15px; line-height: 1.6; font-weight: 500;">
                     Premium Indian Kulfi & Traditional Frozen Desserts<br>

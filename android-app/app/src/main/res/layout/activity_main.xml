@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Loading Himalaya Kulfi..."
+            android:text="Loading Himalayan Kulfi..."
             android:textColor="@color/text_secondary"
             android:textSize="14sp" />
 

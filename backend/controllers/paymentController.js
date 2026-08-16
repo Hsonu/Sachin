@@ -47,7 +47,7 @@ const initiatePayment = async (req, res, next) => {
                 const itemPrice = product.Rate;
                 const itemDiscount = product.discount || 0;
                 const finalItemPrice = Math.round(itemPrice * (1 - itemDiscount / 100));
-                
+
                 resolvedItems.push({
                     productId: product._id,
                     name: product.Productname,
@@ -129,9 +129,9 @@ const initiatePayment = async (req, res, next) => {
             key: PAYU_KEY,
             txnid,
             amount: parseFloat(finalPayableAmount).toFixed(2),
-            productinfo: mainProductName.substring(0, 80) || "Himalaya Kulfi Order",
+            productinfo: mainProductName.substring(0, 80) || "Himalayan Kulfi Order",
             firstname,
-            email: email || "customer@himalayakulfi.com",
+            email: email || "customer@Himalayankulfi.com",
             phone,
             surl,
             furl,
@@ -233,7 +233,7 @@ const paymentSuccess = async (req, res, next) => {
         const { placeOrder } = require("../controllers/orderController");
         // We import the order notifications handler we built in orderController
         const orderController = require("../controllers/orderController");
-        
+
         // Trigger notifications
         const notificationMsg = `🔔 *New Prepaid Order Placed (PayU)!*\n\n*Order ID:* ${savedOrder._id}\n*Customer:* ${savedOrder.customerName || savedOrder.name}\n*Phone:* ${savedOrder.customerMobileNumber || savedOrder.phone}\n*Products:* ${savedOrder.productName}\n*Total Paid:* ₹${savedOrder.withGstTotalAmount}\n*Address:* ${savedOrder.customerAdd}`;
         sendWhatsAppSMS("8603632642", notificationMsg).catch(e => console.error(e));

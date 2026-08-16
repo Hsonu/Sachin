@@ -26,7 +26,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="serif"
         android:letterSpacing="0.08"
-        android:text="HIMALAYAN KULFI"
+        android:text="Himalayan KULFI"
         android:textColor="#D9A52A"
         android:textSize="28sp"
         android:textStyle="bold"

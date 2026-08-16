@@ -9,11 +9,12 @@
     <meta name="theme-color" content="#01150A">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Himalaya Kulfi">
+    <meta name="apple-mobile-web-app-title" content="Himalayan Kulfi">
     <link rel="apple-touch-icon" href="icon-192.png">
-    <title>Order Details – Himalaya Kulfi</title>
+    <title>Order Details – Himalayan Kulfi</title>
     <script src="/auto-logout.js"></script>
-    <meta name="description" content="View your order receipt, tracking details, and purchase summary at Himalaya Kulfi.">
+    <meta name="description"
+        content="View your order receipt, tracking details, and purchase summary at Himalayan Kulfi.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,19 +28,32 @@
            DESIGN TOKENS
         ═══════════════════════════════════════════ */
         :root {
-            --gold: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-dark: #01150A; /* Main very dark Himalayan green */
-            --gold-light: #D9A52A; /* Primary rich golden yellow accent */
-            --gold-bg: #FFFBEB; /* Light amber highlight bg */
-            --cream: #FFFFFF; /* Primary background color (light theme: white) */
-            --dark: #01150A; /* Main brand dark green (retained for buttons/accents) */
-            --dark-2: #01150A; /* Deep brand green for footer background */
-            --dark-3: #17301C; /* Supporting deep natural green */
-            --text-h: #01150A; /* Heading text (dark green/black for readability) */
-            --text-body: #1E293B; /* Body text (slate dark gray for readability) */
-            --text-muted: #64748B; /* Muted slate for subtitles/labels */
-            --border: #E2E8F0; /* Soft gray border instead of gold border */
-            --white: #FFFFFF; /* Pure white surface background for cards / sections */
+            --gold: #D9A52A;
+            /* Primary rich golden yellow accent */
+            --gold-dark: #01150A;
+            /* Main very dark Himalayan green */
+            --gold-light: #D9A52A;
+            /* Primary rich golden yellow accent */
+            --gold-bg: #FFFBEB;
+            /* Light amber highlight bg */
+            --cream: #FFFFFF;
+            /* Primary background color (light theme: white) */
+            --dark: #01150A;
+            /* Main brand dark green (retained for buttons/accents) */
+            --dark-2: #01150A;
+            /* Deep brand green for footer background */
+            --dark-3: #17301C;
+            /* Supporting deep natural green */
+            --text-h: #01150A;
+            /* Heading text (dark green/black for readability) */
+            --text-body: #1E293B;
+            /* Body text (slate dark gray for readability) */
+            --text-muted: #64748B;
+            /* Muted slate for subtitles/labels */
+            --border: #E2E8F0;
+            /* Soft gray border instead of gold border */
+            --white: #FFFFFF;
+            /* Pure white surface background for cards / sections */
             --brand-green: #01150A;
             --deep-green: #17301C;
             --brand-gold: #D9A52A;
@@ -156,7 +170,7 @@
             padding: 0 24px;
         }
 
-                /* Logo */
+        /* Logo */
         #navLogo {
             display: flex;
             align-items: center;
@@ -177,11 +191,12 @@
             transform: rotate(360deg);
         }
 
-        
+
         .mobile-br {
             display: none;
         }
-.brand-text {
+
+        .brand-text {
             display: flex;
             flex-direction: column;
             line-height: 1.1;
@@ -216,7 +231,8 @@
             border-radius: 999px;
             padding: 9px 18px 9px 42px;
             font-size: 0.88rem;
-            color: var(--text-body); outline: none;
+            color: var(--text-body);
+            outline: none;
             transition: all var(--transition);
             font-family: inherit;
         }
@@ -709,10 +725,12 @@
             .mobile-br {
                 display: block !important;
             }
+
             #navLogo .brand-name {
                 font-size: 1.05rem !important;
                 line-height: 1.05 !important;
             }
+
             #navLogo .brand-tagline {
                 font-size: 0.5rem !important;
                 letter-spacing: 0.1em !important;
@@ -785,6 +803,7 @@
             .location-text-group {
                 display: none;
             }
+
             .header-location-btn {
                 padding: 8px;
                 border-radius: 10px;
@@ -796,6 +815,7 @@
                 align-items: center;
                 gap: 0;
             }
+
             .location-icon-svg {
                 width: 18px;
                 height: 18px;
@@ -806,6 +826,7 @@
             :root {
                 --header-h: 165px;
             }
+
             /* Navbar: icons-only mode on small screens */
             .navActionBtn {
                 font-size: 0;
@@ -829,6 +850,7 @@
             :root {
                 --header-h: 165px;
             }
+
             .details-header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -1324,7 +1346,7 @@
                 padding-top: 10px !important;
             }
         }
-    
+
 
         /* ═══════════════════════════════════════════
            HEADER LOCATION WIDGET
@@ -1336,7 +1358,8 @@
             cursor: pointer;
             padding: 8px 14px;
             border-radius: 10px;
-            border: 1px solid var(--border); background: #F1F5F9;
+            border: 1px solid var(--border);
+            background: #F1F5F9;
             transition: all var(--transition);
             user-select: none;
             max-width: 220px;
@@ -1382,7 +1405,8 @@
 
         .location-action {
             font-size: 0.8rem;
-            color: var(--text-body); font-weight: 700;
+            color: var(--text-body);
+            font-weight: 700;
             letter-spacing: 0.01em;
             white-space: nowrap;
         }
@@ -1524,9 +1548,11 @@
                 padding: 6px 8px;
                 max-width: 140px;
             }
+
             .location-label {
                 max-width: 80px;
             }
+
             .location-action {
                 font-size: 0.72rem;
             }
@@ -1538,36 +1564,46 @@
                 max-width: 110px;
                 gap: 6px;
             }
+
             .location-icon-svg {
                 width: 16px;
                 height: 16px;
             }
+
             .location-label {
                 max-width: 60px;
                 font-size: 0.58rem;
             }
+
             .location-action {
                 font-size: 0.68rem;
             }
         }
 
 
-    
+
         @media (max-width: 768px) {
-            #headerLocationBtn, .header-location-btn {
+
+            #headerLocationBtn,
+            .header-location-btn {
                 display: none !important;
             }
         }
-    
+
         /* ═══════════════════════════════════════════
            INPUT TEXT COLOR FIX (HIGH CONTRAST)
         ═══════════════════════════════════════════ */
-        input:not(#searchInput), textarea, select, .form-input {
+        input:not(#searchInput),
+        textarea,
+        select,
+        .form-input {
             color: #111111 !important;
             background-color: #ffffff !important;
         }
 
-        input:not(#searchInput)::placeholder, textarea::placeholder, .form-input::placeholder {
+        input:not(#searchInput)::placeholder,
+        textarea::placeholder,
+        .form-input::placeholder {
             color: #777777 !important;
             opacity: 1 !important;
         }
@@ -1581,8 +1617,8 @@
         #searchInput::placeholder {
             color: var(--text-muted) !important;
         }
-
-</style></head>
+    </style>
+</head>
 
 <body>
 
@@ -1598,18 +1634,20 @@
         <div id="navInner">
 
             <!-- Logo -->
-            <a id="navLogo" href="./index.html" aria-label="Himalaya Kulfi Home">
-                <img class="brand-logo-img" src="./logo.jpg" alt="Himalaya Kulfi Logo">
+            <a id="navLogo" href="./index.html" aria-label="Himalayan Kulfi Home">
+                <img class="brand-logo-img" src="./logo.jpg" alt="Himalayan Kulfi Logo">
                 <div class="brand-text">
-                    <span class="brand-name">Himalaya Kulfi <br class="mobile-br">Desserts</span>
+                    <span class="brand-name">Himalayan Kulfi <br class="mobile-br">Desserts</span>
                     <span class="brand-tagline">Pure Royal Tradition</span>
                 </div>
             </a>
 
             <!-- Location Widget -->
-            <div id="headerLocationBtn" class="header-location-btn" role="button" tabindex="0" aria-label="Select delivery location">
+            <div id="headerLocationBtn" class="header-location-btn" role="button" tabindex="0"
+                aria-label="Select delivery location">
                 <svg viewBox="0 0 24 24" class="location-icon-svg">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                 </svg>
                 <div class="location-text-group">
                     <span class="location-label" id="headerLocationLabel">Delivering to India</span>
@@ -1623,8 +1661,8 @@
                     <circle cx="11" cy="11" r="8" />
                     <path d="M21 21l-4.35-4.35" />
                 </svg>
-                <input id="searchInput" type="text" placeholder="Search malai, mango, kesar pista kulfi…" autocomplete="off"
-                    aria-label="Search products">
+                <input id="searchInput" type="text" placeholder="Search malai, mango, kesar pista kulfi…"
+                    autocomplete="off" aria-label="Search products">
             </div>
 
             <!-- Actions -->
@@ -1656,23 +1694,26 @@
         </div>
     </header>
 
-<!-- Centered Location Modal Overlay -->
-    <div id="locationModal" class="location-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="locationModalTitle">
+    <!-- Centered Location Modal Overlay -->
+    <div id="locationModal" class="location-modal-overlay" role="dialog" aria-modal="true"
+        aria-labelledby="locationModalTitle">
         <div class="location-modal-content">
             <button id="closeLocationModal" class="location-close-btn" aria-label="Close modal">&times;</button>
             <h3 id="locationModalTitle">Choose your location</h3>
-            <p class="location-modal-desc">Enter your 6-digit Indian pincode to check delivery coverage and catalog speed in your area.</p>
-            
+            <p class="location-modal-desc">Enter your 6-digit Indian pincode to check delivery coverage and catalog
+                speed in your area.</p>
+
             <div class="location-input-wrap">
-                <input id="modalPincodeInput" type="text" placeholder="Enter 6-digit Pincode" maxlength="6" autocomplete="off" aria-label="Pincode">
+                <input id="modalPincodeInput" type="text" placeholder="Enter 6-digit Pincode" maxlength="6"
+                    autocomplete="off" aria-label="Pincode">
                 <button id="modalPincodeSubmit" class="location-submit-btn" disabled>Apply</button>
             </div>
-            
+
             <div id="modalPincodeStatus" class="location-status-text"></div>
         </div>
     </div>
 
-<!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+    <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
     <main>
         <div class="container">
             <!-- Print-Only Tax Invoice Header -->
@@ -1682,7 +1723,7 @@
                     <div>
                         <h1
                             style="font-family:'Playfair Display', serif; font-size:24pt; color:#0d0d0f; margin:0; font-weight:700;">
-                            Himalaya Kulfi</h1>
+                            Himalayan Kulfi</h1>
                         <p
                             style="font-size:9pt; text-transform:uppercase; letter-spacing:2px; margin:2px 0 0; color:#3d3d45; font-weight:600;">
                             Luxury &amp; Elegance Certified</p>
@@ -1760,12 +1801,16 @@
                     <div class="info-col">
                         <h4>Request Information</h4>
                         <p>Request Type: <strong id="returnDetailType">—</strong></p>
-                        <p style="margin-top: 6px;">Return Reason: <span id="returnDetailReason" style="color: var(--text-body); font-weight: 500;">—</span></p>
+                        <p style="margin-top: 6px;">Return Reason: <span id="returnDetailReason"
+                                style="color: var(--text-body); font-weight: 500;">—</span></p>
                     </div>
                     <div class="info-col" id="returnDetailRefundCol">
                         <h4>Refund Payment Details</h4>
-                        <p id="returnDetailRefundPayment" style="background: var(--cream); padding: 8px 12px; border-radius: 8px; font-family: monospace; font-weight: 600; font-size: 0.82rem; border: 1px dashed rgba(217, 165, 42, 0.4); margin-top: 6px;">—</p>
-                        <p style="margin-top: 8px;">Refund Status: <strong id="returnDetailRefundStatus" style="color: var(--gold);">Pending</strong></p>
+                        <p id="returnDetailRefundPayment"
+                            style="background: var(--cream); padding: 8px 12px; border-radius: 8px; font-family: monospace; font-weight: 600; font-size: 0.82rem; border: 1px dashed rgba(217, 165, 42, 0.4); margin-top: 6px;">
+                            —</p>
+                        <p style="margin-top: 8px;">Refund Status: <strong id="returnDetailRefundStatus"
+                                style="color: var(--gold);">Pending</strong></p>
                     </div>
                 </div>
             </div>
@@ -2030,13 +2075,13 @@
                         returnDetailsCard.style.display = "block";
                         document.getElementById("returnDetailType").textContent = data.returnType || "Return";
                         document.getElementById("returnDetailReason").textContent = data.returnReason || "Not provided";
-                        
+
                         const refundCol = document.getElementById("returnDetailRefundCol");
                         // Show refund details column if returnType is Refund (for both COD and Online Payment)
                         if (data.returnType === "Refund") {
                             refundCol.style.display = "block";
                             document.getElementById("returnDetailRefundPayment").textContent = data.refundPaymentDetails || "No details provided";
-                            
+
                             const refundStatus = document.getElementById("returnDetailRefundStatus");
                             if (data.orderStatus === "Refund Completed") {
                                 refundStatus.innerHTML = `<span style="color: #10b981; font-weight: 700;">✓ Payment Completed</span>`;
@@ -2098,16 +2143,16 @@
                 const isCOD = currentOrder && currentOrder.paymentMethod === "COD";
                 const returnType = currentOrder ? currentOrder.returnType : "Return";
                 const sLower = (status || "").toLowerCase().trim();
-                
+
                 // Progress calculations
                 let step3Class = "";
                 let step3Dot = "3";
                 let step3Label = "Out For Pickup";
-                
+
                 let step4Class = "";
                 let step4Dot = "4";
                 let step4Label = returnType === "Refund" ? "Refund Completed" : "Exchange Completed";
-                
+
                 let progressPercent = 33;
                 let progressColor = "#f59e0b"; // orange
 
@@ -2239,7 +2284,7 @@
                 const exchangeRadio = document.querySelector('input[name="returnType"][value="Exchange"]');
                 const refundRadio = document.querySelector('input[name="returnType"][value="Refund"]');
                 const payGroup = document.getElementById("refundPaymentDetailsGroup");
-                
+
                 // Both Refund and Exchange options are active (alive) and shown
                 if (refundRadio) {
                     refundRadio.disabled = false;
@@ -2252,7 +2297,7 @@
                 if (exchangeRadio) {
                     exchangeRadio.disabled = false;
                 }
-                
+
                 // Select Refund by default and show details group
                 if (refundRadio) refundRadio.checked = true;
                 if (payGroup) payGroup.style.display = "block";
@@ -2366,9 +2411,9 @@
                 const returnBtn = document.createElement("button");
                 returnBtn.className = "btn-action-return";
                 returnBtn.id = "returnOrderBtn";
-                
+
                 const isProcessedOrPending = ["return requested", "out for pickup", "order picked up", "refund accepted", "refund completed", "not delivered", "reprocess", "return completed", "cancelled"].includes(status);
-                
+
                 if (isProcessedOrPending) {
                     returnBtn.disabled = true;
                     let returnLabel = "Return Completed";
@@ -2674,18 +2719,18 @@
 
     <!-- PWA Service Worker Registration -->
     <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('./service-worker.js')
-                .then(function(reg) { console.log('[SW] Registered:', reg.scope); })
-                .catch(function(err) { console.error('[SW] Failed:', err); });
-        });
-    }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(function (reg) { console.log('[SW] Registered:', reg.scope); })
+                    .catch(function (err) { console.error('[SW] Failed:', err); });
+            });
+        }
     </script>
 
     <!-- Dynamic Header Height Calculation -->
     <script>
-        (function() {
+        (function () {
             function updateHeaderHeight() {
                 const header = document.getElementById("siteHeader");
                 if (header) {
@@ -2706,11 +2751,11 @@
     </script>
 
 
-<script>
+    <script>
         /* ───────────────────────────────────────
            HEADER LOCATION PINCODE CONTROLLER
         ─────────────────────────────────────── */
-        (function() {
+        (function () {
             const locBtn = document.getElementById("headerLocationBtn");
             const modal = document.getElementById("locationModal");
             const closeBtn = document.getElementById("closeLocationModal");
@@ -2782,7 +2827,7 @@
                                     status.style.color = "#22c55e"; // green
                                     status.textContent = `✓ Delivering to ${city}, ${info.State}`;
                                     submit.disabled = false;
-                                    
+
                                     // Save temporary variables in dataset
                                     submit.dataset.city = city;
                                     submit.dataset.pin = pin;

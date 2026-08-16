@@ -15,7 +15,7 @@ const Complaint = require("./backend/models/Complaint");
 const Blog = require("./backend/models/Blog");
 const EventBooking = require("./backend/models/EventBooking");
 
-const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/himalaya_kulfi";
+const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/Himalayan_kulfi";
 
 const seedData = async () => {
     try {
@@ -316,7 +316,7 @@ const seedData = async () => {
         console.log(`✅ Seeded ${seededPincodes.length} serviceable pincodes.`);
 
         console.log("==================================================");
-        console.log("✨ SUCCESS: Himalaya Kulfi Database Seeding Completed!");
+        console.log("✨ SUCCESS: Himalayan Kulfi Database Seeding Completed!");
         console.log("Use: npm start to boot the server.");
         console.log("==================================================");
 
