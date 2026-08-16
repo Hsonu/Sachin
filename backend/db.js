@@ -8,13 +8,21 @@ if (!url) {
     console.error("❌ CRITICAL ERROR: MONGO_URI is not set in the environment variables!");
 } else {
     console.log("⏳ Connecting to MongoDB Atlas...");
-    mongoose.connect(url, { serverSelectionTimeoutMS: 10000 })
-        .then(() => {
-            console.log("✅ MongoDB connected successfully to Atlas");
-        })
-        .catch((err) => {
-            console.error("❌ MongoDB connection error on startup:", err.message);
-        });
+    const connectWithRetry = (options = {}) => {
+        return mongoose.connect(url, { serverSelectionTimeoutMS: 5000, ...options })
+            .then(() => {
+                console.log("✅ MongoDB connected successfully to Atlas");
+            })
+            .catch((err) => {
+                if (!options.family && err.name === "MongooseServerSelectionError") {
+                    console.warn("⚠️ Connection failed. Retrying connection with IPv6 enabled (family: 6)...");
+                    return connectWithRetry({ family: 6 });
+                }
+                console.error("❌ MongoDB connection error on startup:", err.message);
+            });
+    };
+
+    connectWithRetry();
 }
 
 const db = mongoose.connection;

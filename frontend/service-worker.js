@@ -1,4 +1,4 @@
-const CACHE_NAME = 'netrima-jewels-cache-v8';
+const CACHE_NAME = 'himalaya-kulfi-cache-v11';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -7,7 +7,6 @@ const ASSETS_TO_CACHE = [
   './config.js',
   './auto-logout.js',
   './logo.jpg',
-  './icon.svg',
   './icon-192.png',
   './icon-512.png',
   './manifest.json',
@@ -21,61 +20,84 @@ self.addEventListener('install', (event) => {
       console.log('[Service Worker] Caching app shell and core assets');
       return cache.addAll(ASSETS_TO_CACHE);
     }).then(() => {
-      // Force the waiting service worker to become the active service worker
-      return self.skipWaiting();
+      return self.skipWaiting(); // Force active immediately
     })
   );
 });
 
-// Activate Event: Clean up all caches and unregister service worker
+// Activate Event: Clean up old caches and claim clients
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          console.log('[Service Worker] Deleting cache:', cache);
-          return caches.delete(cache);
+          if (cache !== CACHE_NAME) {
+            console.log('[Service Worker] Deleting old cache:', cache);
+            return caches.delete(cache);
+          }
         })
       );
     }).then(() => {
-      console.log('[Service Worker] Unregistering self...');
-      return self.registration.unregister();
-    }).then(() => {
-      return self.clients.claim();
+      return self.clients.claim(); // Take control of all pages immediately
     })
   );
 });
 
-// Fetch Event: Cache first for static assets, network fallback
+// Fetch Event
 self.addEventListener('fetch', (event) => {
-  // Avoid caching non-GET requests or external API calls (e.g. backend api endpoints)
+  // Only handle GET requests
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
 
-  // If fetching backend API or database endpoints, let it go to the network directly
+  // Skip API calls or backend routes
   if (url.pathname.startsWith('/api') || url.pathname.includes('/backend/')) {
     return;
   }
 
+  // Network-First Strategy for HTML / page navigations to ensure latest changes are always shown
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          // Cache the fresh page
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          // If offline, return the cached page
+          return caches.match(event.request).then((cachedResponse) => {
+            if (cachedResponse) return cachedResponse;
+            return caches.match('./index.html');
+          });
+        })
+    );
+    return;
+  }
+
+  // Stale-While-Revalidate / Cache-First for static assets
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
-        // Return cached asset, but fetch updated version in background (stale-while-revalidate pattern)
+        // Fetch updated version in background to update cache
         fetch(event.request).then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
             caches.open(CACHE_NAME).then((cache) => {
               cache.put(event.request, networkResponse);
             });
           }
-        }).catch(() => {/* Ignore network update errors offline */ });
+        }).catch(() => {/* Ignore offline errors */ });
 
         return cachedResponse;
       }
 
-      // Not in cache, fetch from network
+      // If not in cache, fetch from network
       return fetch(event.request).then((response) => {
-        // Cache new successful GET requests to the same origin
         if (response && response.status === 200 && response.type === 'basic' && url.origin === self.location.origin) {
           const responseToCache = response.clone();
           caches.open(CACHE_NAME).then((cache) => {
@@ -83,11 +105,6 @@ self.addEventListener('fetch', (event) => {
           });
         }
         return response;
-      }).catch(() => {
-        // Offline Fallback for Page navigations: if it fails, return index.html
-        if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
-        }
       });
     })
   );
