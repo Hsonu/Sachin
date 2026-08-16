@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-light"
-        android:text="Premium Handcrafted Kulfi &amp; Desserts"
+        android:text="Premium Handcrafted Kulfi &amp; "
         android:textColor="#C4B873"
         android:textSize="15sp"
         android:alpha="0" />

@@ -1,7 +1,7 @@
 {
   "name": "Himalayan-kulfi",
   "version": "1.0.0",
-  "description": "Himalayan Kulfi - Premium Indian Kulfi & Traditional Frozen Desserts",
+  "description": "Himalayan Kulfi - Premium Indian Kulfi & Traditional Frozen ",
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",

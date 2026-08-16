@@ -57,7 +57,7 @@ const seedData = async () => {
             { name: "Falooda", slug: "falooda", description: "Premium layered dessert drinks served with sweet basil seeds, vermicelli, rose syrup and a slice of kulfi.", image: "/images/category_falooda.png" },
             { name: "Rabri", slug: "rabri", description: "Thickened, sweetened milk dessert with layers of malai (cream), cardamom and nuts.", image: "/images/category_rabri.png" },
             { name: "Family Packs", slug: "family-packs", description: "Large sharing packs of our popular kulfi flavors, perfect for functions and get-togethers.", image: "/images/category_family.png" },
-            { name: "Special Desserts", slug: "special-desserts", description: "Chef special fusion frozen desserts and sweets.", image: "/images/category_special.png" }
+            { name: "Special ", slug: "special-", description: "Chef special fusion frozen  and sweets.", image: "/images/category_special.png" }
         ];
 
         const seededCategories = await Category.insertMany(categoriesData);

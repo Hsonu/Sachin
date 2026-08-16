@@ -46,7 +46,7 @@ const productSchema = new mongoose.Schema({
     },
     gst: {
         type: Number,
-        default: 18 // standard 18% GST for premium desserts (or 5%, we default to 18%)
+        default: 18 // standard 18% GST for premium  (or 5%, we default to 18%)
     },
     discount: {
         type: Number,
