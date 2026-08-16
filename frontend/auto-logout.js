@@ -371,17 +371,17 @@
 
         // Inject PWA Install Banner HTML
         const bannerHTML = `
-            <div id="pwaInstallBanner" class="pwa-install-banner" aria-live="polite" aria-label="Install Web App">
+            <div id="pwaInstallBanner" class="pwa-install-banner" aria-live="polite" aria-label="Install App">
                 <div class="pwa-header">
                     <div class="pwa-icon-wrap">
                         <img src="./icon-192.png" alt="Himalaya Kulfi Logo">
                     </div>
                     <div class="pwa-title-group">
                         <span class="pwa-title">Himalaya Kulfi</span>
-                        <span class="pwa-subtitle">Official App</span>
+                        <span class="pwa-subtitle" id="pwaSubtitle">Official App</span>
                     </div>
                 </div>
-                <div class="pwa-body-text">
+                <div class="pwa-body-text" id="pwaBodyText">
                     Add Himalaya Kulfi to your home screen for quick access to collections, seamless checkout, and offline updates.
                 </div>
                 <div class="pwa-actions">
@@ -424,7 +424,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 2v14M19 9l-7 7-7-7M5 20h14"/>
                     </svg>
-                    Install
+                    <span id="navPwaInstallText">Install</span>
                 </a>
             `;
             const wrapper = document.createElement("div");
@@ -446,10 +446,12 @@
         const btnInstall = document.getElementById('pwaBtnInstall');
         const btnDismiss = document.getElementById('pwaBtnDismiss');
         const navInstallBtn = document.getElementById('navPwaInstallBtn');
+        const navInstallText = document.getElementById('navPwaInstallText');
         
         const iosSheet = document.getElementById('pwaIosSheet');
         const iosCloseBtn = document.getElementById('iosCloseBtn');
 
+        const isAndroid = /Android/i.test(navigator.userAgent);
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
         const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
 
@@ -458,23 +460,59 @@
         const oneWeek = 7 * 24 * 60 * 60 * 1000;
         const shouldShowPrompt = !isDismissed || (dismissedTime && (Date.now() - Number(dismissedTime) > oneWeek));
 
-        // 1. Android/Desktop prompt handler
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
+        // Function to trigger APK Download
+        function triggerApkDownload() {
+            console.log('[PWA] Triggering APK Download...');
+            const link = document.createElement('a');
+            link.href = './himalaya-kulfi.apk';
+            link.download = 'himalaya-kulfi.apk';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 
-            // Show navbar install option
+        // Dynamic customizations for Android users
+        if (isAndroid) {
+            // Update bottom banner text for Android
+            const subtitleEl = document.getElementById('pwaSubtitle');
+            if (subtitleEl) subtitleEl.textContent = 'Official Android App';
+            const bodyEl = document.getElementById('pwaBodyText');
+            if (bodyEl) bodyEl.textContent = 'Download the official Himalaya Kulfi Android app directly to your device.';
+            if (btnInstall) btnInstall.textContent = 'Download App';
+            
+            // Update navbar install text for Android
+            if (navInstallText) navInstallText.textContent = 'Download';
+
+            // Show navbar option immediately for Android (so they can always download it)
             if (navInstallBtn && !isStandalone) {
                 navInstallBtn.style.display = 'flex';
             }
 
-            // Show bottom popup banner
+            // Show bottom popup banner after 2s
             if (shouldShowPrompt && pwaBanner && !isStandalone) {
                 setTimeout(() => {
                     pwaBanner.classList.add('show');
                 }, 2000);
             }
-        });
+        } else {
+            // Standard PWA flow (Desktop)
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+
+                // Show navbar install option
+                if (navInstallBtn && !isStandalone) {
+                    navInstallBtn.style.display = 'flex';
+                }
+
+                // Show bottom popup banner
+                if (shouldShowPrompt && pwaBanner && !isStandalone) {
+                    setTimeout(() => {
+                        pwaBanner.classList.add('show');
+                    }, 2000);
+                }
+            });
+        }
 
         // 2. iOS handler
         if (isIOS && !isStandalone) {
@@ -489,9 +527,14 @@
             }
         }
 
-        // Install Button (Android/Desktop)
+        // Install Button (Android/iOS/Desktop) Click
         if (btnInstall) {
             btnInstall.addEventListener('click', async () => {
+                if (isAndroid) {
+                    pwaBanner.classList.remove('show');
+                    triggerApkDownload();
+                    return;
+                }
                 if (isIOS) {
                     pwaBanner.classList.remove('show');
                     if (iosSheet) iosSheet.classList.add('show');
@@ -511,6 +554,10 @@
         if (navInstallBtn) {
             navInstallBtn.addEventListener('click', (e) => {
                 e.preventDefault();
+                if (isAndroid) {
+                    triggerApkDownload();
+                    return;
+                }
                 if (isIOS) {
                     if (iosSheet) iosSheet.classList.add('show');
                     return;
@@ -542,7 +589,7 @@
             });
         }
 
-        // Listen for successful installation
+        // Listen for successful installation (PWA)
         window.addEventListener('appinstalled', () => {
             console.log('[PWA] App installed successfully');
             if (pwaBanner) pwaBanner.classList.remove('show');

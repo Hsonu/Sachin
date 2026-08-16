@@ -18,13 +18,12 @@ android {
     }
 
     signingConfigs {
-        // Uncomment and fill in for Play Store release builds:
-        // create("release") {
-        //     storeFile = file("../himalayakulfi-release.keystore")
-        //     storePassword = "YOUR_STORE_PASSWORD"
-        //     keyAlias = "himalayakulfi"
-        //     keyPassword = "YOUR_KEY_PASSWORD"
-        // }
+        create("release") {
+            storeFile = file("../himalayakulfi-release.keystore")
+            storePassword = "himalaya2026"
+            keyAlias = "himalayakulfi"
+            keyPassword = "himalaya2026"
+        }
     }
 
     buildTypes {
@@ -32,8 +31,7 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            // Uncomment for Play Store release:
-            // signingConfig = signingConfigs.getByName("release")
+            signingConfig = signingConfigs.getByName("release")
         }
         debug {
             isMinifyEnabled = false
