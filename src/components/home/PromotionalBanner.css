@@ -1,0 +1,184 @@
+.promo-banner-section {
+  padding: 4rem 0;
+  background-color: var(--color-bg, #fdf7f3);
+}
+
+.promo-banner-card {
+  background: var(--color-primary, #710a1d);
+  border-radius: var(--radius-lg, 12px);
+  color: white;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(113, 10, 29, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 992px) {
+  .promo-banner-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.promo-banner-content {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .promo-banner-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.promo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 124, 26, 0.2);
+  border: 1px solid rgba(255, 124, 26, 0.4);
+  color: var(--color-accent, #ff7c1a);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  align-self: flex-start;
+}
+
+.promo-title {
+  font-family: var(--font-serif, 'Georgia', serif);
+  font-size: 2.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .promo-title {
+    font-size: 1.8rem;
+  }
+}
+
+.promo-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.promo-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
+}
+
+.promo-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
+.promo-check {
+  color: var(--color-accent, #ff7c1a);
+  flex-shrink: 0;
+}
+
+.promo-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-promo-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-whatsapp, #25d366);
+  color: white;
+  padding: 0.85rem 1.6rem;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  transition: all 0.25s;
+}
+
+.btn-promo-whatsapp:hover {
+  background: #1eb954;
+  transform: translateY(-2px);
+}
+
+.btn-promo-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.85rem 1.6rem;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+.btn-promo-contact:hover {
+  background: white;
+  color: var(--color-primary, #710a1d);
+}
+
+.promo-banner-image-wrap {
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.promo-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo-image-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(59, 53, 53, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md, 8px);
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+}
+
+.badge-highlight-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--color-accent, #ff7c1a);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.badge-highlight-text {
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  line-height: 1.3;
+}

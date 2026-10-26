@@ -1,0 +1,138 @@
+/* ============================================
+   Category Page Styles — Himalayan Kulfi
+   Clean B2B Reference Aesthetic (AaharPack Match)
+   ============================================ */
+
+.category-hero-banner {
+  background: var(--color-primary, #710a1d);
+  color: #ffffff;
+  padding: 3.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-hero-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .category-hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.category-hero-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(255, 124, 26, 0.2);
+  color: #ff9d5c;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 0.85rem;
+  border: 1px solid rgba(255, 124, 26, 0.35);
+}
+
+.category-hero-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.category-hero-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.category-stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.stat-pill {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  color: #f1f5f9;
+}
+
+.category-hero-visual {
+  width: 100%;
+  max-height: 280px;
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #ffffff;
+}
+
+.category-hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Products Section */
+.category-products-section {
+  padding: 3.5rem 0 5rem;
+  background: var(--color-background, #fdf7f3);
+}
+
+.category-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.results-count-text {
+  font-size: 0.92rem;
+  color: var(--color-text-muted, #64748b);
+}
+
+.results-count-text strong {
+  color: var(--color-text, #3b3535);
+}
+
+.sort-mini-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text, #3b3535);
+  font-weight: 600;
+}
+
+.sort-mini-select {
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid var(--color-border, #e5e7eb);
+  background: #ffffff;
+  color: var(--color-text, #3b3535);
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.sort-mini-select:focus {
+  border-color: var(--color-accent, #ff7c1a);
+}

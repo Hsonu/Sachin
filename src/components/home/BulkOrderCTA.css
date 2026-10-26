@@ -1,0 +1,221 @@
+.bulk-cta-section {
+  padding: 4.5rem 0;
+  background-color: var(--color-bg, #fdf7f3);
+}
+
+.bulk-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .bulk-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.bulk-cta-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.bulk-cta-title {
+  font-family: var(--font-serif, 'Georgia', serif);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-black, #3b3535);
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .bulk-cta-title {
+    font-size: 1.8rem;
+  }
+}
+
+.bulk-cta-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted, #6b7280);
+  margin-bottom: 2rem;
+}
+
+.bulk-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bulk-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-md, 8px);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.bulk-contact-item:hover {
+  border-color: var(--color-accent, #ff7c1a);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-icon-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 124, 26, 0.1);
+  color: var(--color-accent, #ff7c1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-val {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-black, #3b3535);
+}
+
+/* Form Card */
+.bulk-cta-form-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-lg, 12px);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card, 0 1px 3px rgba(0,0,0,0.06));
+}
+
+@media (max-width: 640px) {
+  .bulk-cta-form-card {
+    padding: 1.5rem;
+  }
+}
+
+.form-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-black, #3b3535);
+  margin-bottom: 0.25rem;
+}
+
+.form-card-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted, #6b7280);
+  margin-bottom: 1.75rem;
+}
+
+.bulk-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 560px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  color: var(--color-black, #3b3535);
+  outline: none;
+  background: #ffffff;
+  transition: all 0.2s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--color-primary, #710a1d);
+  box-shadow: 0 0 0 3px rgba(113, 10, 29, 0.1);
+}
+
+.btn-submit-inquiry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--color-black, #3b3535);
+  color: white;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-submit-inquiry:hover {
+  background: var(--color-accent, #ff7c1a);
+  transform: translateY(-2px);
+}
+
+.form-success-box {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-success-box h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-black, #3b3535);
+}
+
+.form-success-box p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}

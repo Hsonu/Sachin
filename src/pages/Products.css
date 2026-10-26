@@ -1,0 +1,22 @@
+.products-page-header {
+  background: #ffffff;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color-border-light, #e2e8f0);
+}
+
+.products-page-main {
+  padding: 3rem 0 5rem;
+  background: #f8fafc;
+}
+
+.products-results-info {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results-count {
+  font-size: 0.95rem;
+  color: #475569;
+}

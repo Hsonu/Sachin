@@ -1,0 +1,148 @@
+// ============================================
+// Himalayan Kulfi - Categories Data
+// Strict Reference Match (AaharPack Style)
+// All images verified from Unsplash for Packaging Products
+// ============================================
+
+const categories = [
+  {
+    id: 1,
+    name: 'Paper Cup',
+    slug: 'paper-cup',
+    color: '#710a1d',
+    image: 'https://images.unsplash.com/photo-1577937927133-66ef06acdf18?w=500&h=500&fit=crop',
+    description: 'Premium single, double, and ripple wall paper cups for hot and cold beverages. Available in various sizes with custom printing options.',
+    productCount: 12,
+  },
+  {
+    id: 2,
+    name: 'Cup Holder',
+    slug: 'cup-holder',
+    color: '#ff7c1a',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&h=500&fit=crop',
+    description: 'Sturdy paper cup holders and kraft carriers for safe and convenient carrying. Available in 2-cup and 4-cup configurations.',
+    productCount: 4,
+  },
+  {
+    id: 3,
+    name: 'Ice Cream Cup',
+    slug: 'ice-cream-cup',
+    color: '#710a1d',
+    image: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?w=500&h=500&fit=crop',
+    description: 'Food-grade leak-proof ice cream and dessert paper cups in multiple sizes with custom printing.',
+    productCount: 8,
+  },
+  {
+    id: 4,
+    name: 'Burger Boxes',
+    slug: 'burger-boxes',
+    color: '#ff7c1a',
+    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&h=500&fit=crop',
+    description: 'Eco-friendly kraft burger clamshell boxes. Grease-resistant paperboard construction with secure tab lock.',
+    productCount: 6,
+  },
+  {
+    id: 5,
+    name: 'Food Box',
+    slug: 'food-box',
+    color: '#710a1d',
+    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&h=500&fit=crop',
+    description: 'Versatile food containers for takeaway and delivery. Multiple compartment options available.',
+    productCount: 10,
+  },
+  {
+    id: 6,
+    name: 'Waffle Pouch',
+    slug: 'waffle-pouch',
+    color: '#ff7c1a',
+    image: 'https://images.unsplash.com/photo-1526399232581-2ab5608b6336?w=500&h=500&fit=crop',
+    description: 'Convenient kraft paper waffle, crepe, and sandwich sleeves for quick-service vendors.',
+    productCount: 4,
+  },
+  {
+    id: 7,
+    name: 'Paper Straws',
+    slug: 'paper-straws',
+    color: '#710a1d',
+    image: 'https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?w=500&h=500&fit=crop',
+    description: '100% biodegradable 4-ply paper straws in solid colors, stripes, and custom prints. FDA approved.',
+    productCount: 6,
+  },
+  {
+    id: 8,
+    name: 'Paper Tray',
+    slug: 'paper-tray',
+    color: '#ff7c1a',
+    image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500&h=500&fit=crop',
+    description: 'Durable paper food boat trays for fries, nachos, and appetizers. Custom logo printing available.',
+    productCount: 8,
+  },
+  {
+    id: 9,
+    name: 'Butter Paper',
+    slug: 'butter-paper',
+    color: '#710a1d',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&h=500&fit=crop',
+    description: 'Food-grade butter paper and wax paper sheets. Perfect for wrapping, baking, and food presentation.',
+    productCount: 4,
+  },
+  {
+    id: 10,
+    name: 'French Fries Cups',
+    slug: 'french-fries-cups',
+    color: '#ff7c1a',
+    image: 'https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?w=500&h=500&fit=crop',
+    description: 'Scoop-style and flat-bottom french fries packaging cups. Grease-proof with custom branding options.',
+    productCount: 6,
+  },
+  {
+    id: 11,
+    name: 'Salad Bowl',
+    slug: 'salad-paper-bowl',
+    color: '#710a1d',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=500&fit=crop',
+    description: 'Kraft and white paper salad bowls with clear anti-fog lids. Leak-resistant and compostable.',
+    productCount: 8,
+  },
+  {
+    id: 12,
+    name: 'Wooden Cutlery',
+    slug: 'wooden-cutlery',
+    color: '#ff7c1a',
+    image: 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=500&h=500&fit=crop',
+    description: 'Premium birchwood forks, spoons, knives, and stirrers. 100% natural and biodegradable.',
+    productCount: 6,
+  },
+  {
+    id: 13,
+    name: 'Paper Bowl',
+    slug: 'paper-bowl',
+    color: '#710a1d',
+    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=500&h=500&fit=crop',
+    description: 'Kraft and white paper bowls for soups, noodles, and hot foods. Available with and without lids.',
+    productCount: 10,
+  },
+  {
+    id: 14,
+    name: 'Bagasse Products',
+    slug: 'baggase-products',
+    color: '#ff7c1a',
+    image: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?w=500&h=500&fit=crop',
+    description: 'Sugarcane bagasse plates, bowls, and containers. 100% compostable and microwave safe.',
+    productCount: 8,
+  },
+  {
+    id: 15,
+    name: 'Spit Cup',
+    slug: 'spit-cup',
+    color: '#710a1d',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop',
+    description: 'Disposable hygienic medical paper cups with secure lids. Clean and sterile.',
+    productCount: 3,
+  },
+];
+
+export default categories;
+
+export const getCategoryBySlug = (slug) => categories.find((c) => c.slug === slug);
+export const getCategoryById = (id) => categories.find((c) => c.id === id);

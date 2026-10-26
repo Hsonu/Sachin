@@ -1,0 +1,51 @@
+/* ============================================
+   Himalayan Kulfi — Responsive Breakpoints
+   ============================================ */
+
+/* Tablet */
+@media (min-width: 640px) {
+  :root {
+    --container-padding: 1.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 2rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1280px) {
+  :root {
+    --container-padding: 4rem;
+  }
+}
+
+/* Mobile-specific */
+@media (max-width: 639px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Medium screens and up */
+@media (min-width: 768px) {
+  .hide-md-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hide-md-down {
+    display: none !important;
+  }
+}

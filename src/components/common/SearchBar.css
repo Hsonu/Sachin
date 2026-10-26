@@ -1,0 +1,168 @@
+/* ============================================
+   SearchBar Styles — Himalayan Kulfi
+   Clean B2B Reference Aesthetic (AaharPack Match)
+   ============================================ */
+
+.searchbar-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.searchbar-form {
+  width: 100%;
+}
+
+.searchbar-input-group {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 9999px;
+  padding: 0.35rem 0.5rem 0.35rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.searchbar-input-group:focus-within {
+  background: #ffffff;
+  border-color: var(--color-accent, #ff7c1a);
+  box-shadow: 0 0 0 3px rgba(255, 124, 26, 0.12);
+}
+
+.searchbar-icon {
+  color: var(--color-text-muted, #64748b);
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+.searchbar-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.88rem;
+  color: var(--color-text, #3b3535);
+}
+
+.searchbar-clear-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted, #94a3b8);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+}
+
+.searchbar-clear-btn:hover {
+  color: var(--color-text, #3b3535);
+  background: #f1f5f9;
+}
+
+.searchbar-submit-btn {
+  background: var(--color-accent, #ff7c1a);
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.searchbar-submit-btn:hover {
+  background: #e6680a;
+}
+
+/* Autocomplete Dropdown */
+.searchbar-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: var(--radius-md, 8px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--color-border, #e5e7eb);
+  z-index: 1000;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.searchbar-dropdown-header {
+  padding: 0.6rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted, #64748b);
+  border-bottom: 1px solid var(--color-border-light, #f1f5f9);
+  background: #fafafa;
+}
+
+.searchbar-result-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-border-light, #f8fafc);
+  transition: background 0.15s;
+}
+
+.searchbar-result-item:hover {
+  background: #fff8f3;
+}
+
+.searchbar-item-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid var(--color-border, #e5e7eb);
+}
+
+.searchbar-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchbar-item-category {
+  font-size: 0.72rem;
+  color: var(--color-primary, #710a1d);
+  font-weight: 700;
+}
+
+.searchbar-item-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text, #3b3535);
+  line-height: 1.3;
+}
+
+.searchbar-item-price {
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #64748b);
+  margin-top: 2px;
+}
+
+.searchbar-arrow {
+  color: #cbd5e1;
+}
+
+.searchbar-result-item:hover .searchbar-arrow {
+  color: var(--color-accent, #ff7c1a);
+}
+
+.searchbar-no-results {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--color-text-muted, #64748b);
+  font-size: 0.9rem;
+}

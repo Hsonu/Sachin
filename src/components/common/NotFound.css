@@ -1,0 +1,87 @@
+/* ============================================
+   NotFound 404 Styles — Himalayan Kulfi
+   Clean B2B Reference Aesthetic (AaharPack Match)
+   ============================================ */
+
+.not-found-container {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background: var(--color-background, #fdf7f3);
+}
+
+.not-found-content {
+  max-width: 550px;
+}
+
+.not-found-badge {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--color-primary, #710a1d);
+  line-height: 1;
+  letter-spacing: -2px;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+
+.not-found-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text, #3b3535);
+  margin-bottom: 1rem;
+}
+
+.not-found-text {
+  font-size: 1.02rem;
+  color: var(--color-text-muted, #64748b);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.not-found-actions .btn-primary {
+  background: var(--color-accent, #ff7c1a);
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.not-found-actions .btn-primary:hover {
+  background: #e6680a;
+}
+
+.not-found-actions .btn-secondary {
+  background: #ffffff;
+  color: var(--color-text, #3b3535);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.not-found-actions .btn-secondary:hover {
+  background: #fafafa;
+}

@@ -1,0 +1,156 @@
+/* ============================================
+   Policy Pages Styles — Himalayan Kulfi
+   Clean B2B Reference Aesthetic (AaharPack Match)
+   ============================================ */
+
+.policy-hero {
+  background: #ffffff;
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+}
+
+.policy-main-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--color-text, #3b3535);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.policy-update-date {
+  font-size: 0.88rem;
+  color: var(--color-text-muted, #64748b);
+}
+
+.policy-body-section {
+  padding: 4rem 0 5rem;
+  background: var(--color-background, #fdf7f3);
+}
+
+.policy-grid-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 860px) {
+  .policy-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.policy-sidebar {
+  background: #ffffff;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-md, 8px);
+  padding: 1.5rem;
+  position: sticky;
+  top: 90px;
+}
+
+.policy-sidebar-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #64748b);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border-light, #f1f5f9);
+}
+
+.policy-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.policy-nav-item {
+  padding: 0.6rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text, #3b3535);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.policy-nav-item:hover {
+  background: #f1f5f9;
+  color: var(--color-primary, #710a1d);
+}
+
+.policy-nav-item.active {
+  background: rgba(113, 10, 29, 0.08);
+  color: var(--color-primary, #710a1d);
+  font-weight: 700;
+}
+
+/* Content Area */
+.policy-content-article {
+  background: #ffffff;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-md, 8px);
+  padding: 3rem;
+}
+
+@media (max-width: 640px) {
+  .policy-content-article {
+    padding: 1.75rem;
+  }
+}
+
+.policy-section-block {
+  margin-bottom: 2.25rem;
+}
+
+.policy-section-heading {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text, #3b3535);
+  margin-bottom: 0.75rem;
+}
+
+.policy-section-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.policy-contact-box {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: var(--radius-sm, 6px);
+  border-left: 4px solid var(--color-primary, #710a1d);
+}
+
+.policy-contact-box h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text, #3b3535);
+  margin-bottom: 0.35rem;
+}
+
+.policy-contact-box p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted, #64748b);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.policy-contact-box a {
+  color: var(--color-primary, #710a1d);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.policy-contact-box a:hover {
+  text-decoration: underline;
+  color: var(--color-accent, #ff7c1a);
+}

@@ -1,0 +1,81 @@
+/* ============================================
+   Himalayan Kulfi — Design Tokens
+   Strictly verified from reference: aaharpack.com
+   ============================================ */
+
+:root {
+  /* Strict Reference Colors */
+  --color-primary: #710a1d;           /* Signature AaharPack Maroon */
+  --color-primary-hover: #5a0816;     /* Darker Maroon for active/hover */
+  --color-secondary: #ff7c1a;         /* Warm Packaging Orange */
+  --color-accent: #ff7c1a;            /* Accent Orange */
+  --color-accent-hover: #e06b10;      /* Darker Orange for hover */
+
+  /* Neutral & Base Colors */
+  --color-background: #fdf7f3;        /* Warm cream background used across aaharpack */
+  --color-bg: #fdf7f3;
+  --color-bg-white: #ffffff;
+  --color-bg-gray: #f9fafb;
+  --color-card: #ffffff;
+
+  /* Typography Colors */
+  --color-text: #3b3535;              /* Deep charcoal/black used across aaharpack */
+  --color-black: #3b3535;
+  --color-text-muted: #6b7280;        /* Subdued slate text */
+  --color-text-light: #9ca3af;
+  --color-border: #e5e7eb;            /* Clean 1px card/divider borders */
+  --color-border-light: #f3f4f6;
+
+  /* Utility Functional Colors */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #1eb954;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+
+  /* Typography */
+  --font-primary: 'Plus Jakarta Sans', 'Figtree', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+
+  /* Font Sizes */
+  --text-xs: 0.6875rem;   /* 11px */
+  --text-sm: 0.8125rem;   /* 13px */
+  --text-base: 0.9375rem; /* 15px */
+  --text-md: 1rem;        /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.35rem;     /* 21px */
+  --text-2xl: 1.65rem;    /* 26px */
+  --text-3xl: 2.15rem;    /* 34px */
+  --text-4xl: 2.75rem;    /* 44px */
+
+  /* Layout & Spacing */
+  --container-max: 1240px;
+  --container-padding: 1.25rem;
+
+  /* Commercial B2B Border Radius (Clean, not over-rounded) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Subtle Clean Shadows (No exaggerated AI glows) */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 8px 20px -4px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-dropdown: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+
+  /* Stacking Context & Z-Index */
+  --z-base: 1;
+  --z-card: 10;
+  --z-sticky: 1000;
+  --z-dropdown: 1100;
+  --z-whatsapp: 1200;
+  --z-overlay: 1300;
+  --z-sidebar: 1400;
+  --z-modal: 1500;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+}

@@ -1,0 +1,312 @@
+.aahar-hero-section {
+  position: relative;
+  background-color: var(--color-bg, #fdf7f3);
+  padding: 3rem 0 4rem;
+  overflow: hidden;
+  min-height: 580px;
+}
+
+.aahar-hero-container {
+  position: relative;
+}
+
+.aahar-hero-slide-wrapper {
+  position: relative;
+  min-height: 500px;
+}
+
+.aahar-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+}
+
+.aahar-hero-slide.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+.aahar-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .aahar-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Card Styling (Exact AaharPack design) */
+.aahar-hero-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 8px solid var(--accent-border, #ff7c1a);
+  border-radius: 0 40px 40px 0;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 640px) {
+  .aahar-hero-card {
+    padding: 2rem 1.5rem;
+    border-radius: 0 24px 24px 0;
+  }
+}
+
+.aahar-hero-series-tag {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-black, #3b3535);
+  margin-bottom: 1rem;
+}
+
+.aahar-hero-title {
+  font-family: var(--font-serif, 'Georgia', serif);
+  font-size: 2.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-black, #3b3535);
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .aahar-hero-title {
+    font-size: 2.1rem;
+  }
+}
+
+.aahar-hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 1.75rem;
+}
+
+.aahar-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.aahar-tag-pill {
+  padding: 0.4rem 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.aahar-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.aahar-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-black, #3b3535);
+  color: white;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.aahar-hero-btn:hover {
+  background: var(--color-accent, #ff7c1a);
+  transform: translateY(-2px);
+}
+
+.aahar-hero-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  border: 2px solid var(--color-black, #3b3535);
+  color: var(--color-black, #3b3535);
+  transition: all 0.25s ease;
+}
+
+.aahar-hero-btn-outline:hover {
+  background: var(--color-black, #3b3535);
+  color: white;
+}
+
+/* Image Stage (Right Column) */
+.aahar-hero-img-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aahar-hero-img-stage {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aahar-hero-ambient-glow {
+  position: absolute;
+  inset: -15px;
+  background: var(--glow-color, #ff7c1a);
+  opacity: 0.12;
+  filter: blur(50px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.aahar-hero-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.aahar-hero-product-img:hover {
+  transform: scale(1.03);
+}
+
+.aahar-hero-moq-badge {
+  position: absolute;
+  bottom: 20px;
+  right: -15px;
+  background: white;
+  padding: 0.85rem 1.25rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f9;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .aahar-hero-moq-badge {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.moq-label {
+  font-size: 9px;
+  font-weight: 800;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.moq-val {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.moq-unit {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+/* Round Navigation Arrows */
+.aahar-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-black, #3b3535);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.2s ease;
+}
+
+.aahar-slider-arrow:hover {
+  background: var(--color-accent, #ff7c1a);
+  color: white;
+  border-color: var(--color-accent, #ff7c1a);
+}
+
+.aahar-slider-arrow.prev {
+  left: -20px;
+}
+
+.aahar-slider-arrow.next {
+  right: -20px;
+}
+
+@media (max-width: 1240px) {
+  .aahar-slider-arrow.prev { left: 10px; }
+  .aahar-slider-arrow.next { right: 10px; }
+}
+
+@media (max-width: 768px) {
+  .aahar-slider-arrow {
+    display: none;
+  }
+}
+
+/* Dots */
+.aahar-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+}
+
+.aahar-slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0;
+}
+
+.aahar-slider-dot.active {
+  width: 28px;
+  border-radius: 8px;
+  background: var(--color-accent, #ff7c1a);
+}
