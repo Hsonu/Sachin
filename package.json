@@ -1,22 +1,40 @@
 {
-  "name": "sachin-1",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "Himalayan-kulfi",
+  "version": "1.0.0",
+  "description": "Himalayan Kulfi - Premium Indian Kulfi & Traditional Frozen",
+  "main": "backend/server.js",
   "scripts": {
+    "start": "node backend/server.js",
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "typescript": "~6.0.3",
-    "vite": "^8.3.4"
+    "server": "node backend/server.js",
+    "server:dev": "nodemon backend/server.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "seed": "node seed.js"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.1.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.2",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^1.61.0",
+    "mongoose": "^8.3.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^8.0.7",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
