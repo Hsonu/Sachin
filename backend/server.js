@@ -8,7 +8,9 @@ process.on("unhandledRejection", (reason, promise) => {
 });
 
 const path = require("path");
+const fs = require("fs");
 require("dotenv").config({ path: path.join(__dirname, ".env") });
+require("dotenv").config({ path: path.join(__dirname, "../.env") });
 const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
@@ -56,6 +58,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload({ useTempFiles: true }));
 
 // Serve Static Assets
+const distPath = path.join(__dirname, "../dist");
+if (fs.existsSync(distPath)) {
+    app.use(express.static(distPath));
+}
 app.use(express.static(path.join(__dirname, "../frontend")));
 app.use(express.static(path.join(__dirname, "../adminPanel")));
 app.use("/admin", express.static(path.join(__dirname, "../adminPanel/order")));
@@ -560,6 +566,17 @@ async function seedOwner() {
 }
 db.once("open", seedOwner);
 
+// SPA Fallback: Serve dist/index.html for client-side React routes
+app.use((req, res, next) => {
+    if (req.method === "GET" && !req.path.startsWith("/api") && !req.path.startsWith("/admin") && !req.path.startsWith("/owner")) {
+        const indexPath = path.join(__dirname, "../dist/index.html");
+        if (fs.existsSync(indexPath)) {
+            return res.sendFile(indexPath);
+        }
+    }
+    next();
+});
+
 // Fallback 404
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, "../frontend/404.html"), (err) => {
@@ -576,7 +593,7 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`===================================================`);
     console.log(`Himalayan Kulfi Server running on port ${port}`);
     console.log(`URL: http://localhost:${port}`);
